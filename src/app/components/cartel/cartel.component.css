@@ -1,0 +1,10 @@
+.cartel{
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(43, 58, 15, 0.52), rgba(80, 97, 7, 0.73)),
+    url("../../../assets/images/sonnenaufgang.jpg"), linear-gradient(#c6e576, #e72923);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   font-family: 'Quintessential', cursive;;
+}

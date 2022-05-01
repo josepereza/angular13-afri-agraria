@@ -1,0 +1,79 @@
+.micontainer {
+    height: 100vh;
+    margin-top:8%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+
+}
+.izquierda{
+    width: 70%;
+    color: aliceblue;
+}
+.imagenes{
+    position: relative;
+    width: 100%;
+}
+
+.derecha {
+    position: absolute;
+    right: 50px;
+   width: 100%;
+    /* margin: auto; */
+    margin-top: 0px !important;
+
+
+}
+.derecha2{
+    position: absolute;
+    right: 50px;
+   width: 100%;
+    /* margin: auto; */
+    margin-top: 0px !important;
+
+}
+h1 {
+    font-family: 'Quintessential', cursive;
+}
+h2 {
+    font-family: 'Sedgwick Ave', cursive;
+}
+p{
+    font-family: 'Quintessential', cursive;
+    letter-spacing:5px;
+}
+.jumbotron p {
+    font-family: 'Orelega One', cursive;
+}
+@media screen and (max-width: 600px) {
+    .micontainer {
+        height: 100vh;
+        margin-top: 20%;
+        width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    
+    }
+   
+    .derecha {
+       
+      
+       width: 100%;
+        /* margin: auto; */
+        margin-top: 70px !important;
+ padding-left: 60px;
+    
+    }
+    .derecha2{
+       
+       width: 100%;
+        /* margin: auto; */
+        margin-top: 70px !important;
+        padding-left: 60px;
+
+    
+    }
+  }
