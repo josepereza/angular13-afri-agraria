@@ -1,5 +1,38 @@
 # AfriAgraria
+### Making Animations in Angular Reusable
 
+```
+import {animate, animateChild, query, stagger, style, transition, trigger} from "@angular/animations";
+
+
+export class Animations {
+    public static fadeIn = trigger('fadeIn', [
+        transition(':enter', [
+            style({ opacity: '0', marginTop: '10px'}),
+            animate('.2s ease-in', style({ opacity: '1', marginTop: '0px' })),
+        ]),
+    ]);
+    public static stagger =  trigger('stagger', [
+        transition(':enter', [
+            query(':enter', stagger('.2s', [animateChild()]),{ optional: true })
+        ])
+    ])
+}
+
+//Using in Component File
+//
+//import {Animations} from "../../../../shared/animations/basic-animations";
+//
+//@Component({
+//  selector: 'app-component',
+//  providers: [],
+//  templateUrl: './app.component.html',
+//  animations: [
+//      Animations.fadeIn,
+//      Animations.stagger
+//  ],
+//})
+```
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
 ## Development server
