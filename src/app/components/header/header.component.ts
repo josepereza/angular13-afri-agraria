@@ -22,7 +22,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
       ])
 
     ]),
-    trigger('entrada-derecha', [
+    trigger('fadeIn', [
       state('in', style({ opacity: 1 })),
       state('out', style({ opacity: 0 })),
 
@@ -43,7 +43,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
       ]),
     ]),
 
-    trigger('entrada-derecha2', [
+    trigger('fadeIn2', [
       state('in', style({ opacity: 1 })),
       state('out', style({ opacity: 0 })),
 
