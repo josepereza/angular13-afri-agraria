@@ -1,0 +1,8 @@
+.producto{
+    max-width: 100vw;
+    margin-top: 100px !important;
+    height: 100% !important;
+}
+.card{
+    background-color: transparent !important;
+}

@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css2?family=Orelega+One&family=Pattaya&family=Quintessential&family=Sedgwick+Ave&display=swap');*{
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&family=Pattaya&family=Quintessential&family=Sedgwick+Ave&display=swap');
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+
 body{
     background-color: black;
 }

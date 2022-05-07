@@ -11,6 +11,7 @@ import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { CartelComponent } from './components/cartel/cartel.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { IconosComponent } from './components/iconos/iconos.component';
+import { ShopComponent } from './pages/shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { IconosComponent } from './components/iconos/iconos.component';
     JumbotronComponent,
     CartelComponent,
     FooterComponent,
-    IconosComponent
+    IconosComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
