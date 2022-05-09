@@ -1,7 +1,11 @@
 .iconos{
     display:grid;
     grid-template-columns: auto auto auto;
-    grid-column-gap: 100px;
+    grid-column-gap: 80px;
+}
+img{
+    width: 70%;
+    min-width: 150px;
 }
 @media screen and (max-width: 600px) {
     .iconos {
@@ -10,3 +14,4 @@
         justify-items: center;
     }
   }
+ 
