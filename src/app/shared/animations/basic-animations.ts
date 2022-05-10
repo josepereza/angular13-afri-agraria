@@ -32,5 +32,21 @@ export class Animations {
         transition('* => void', [
           animate('1s 200ms ease-out', style({ opacity: 0 }))
         ]),
+      ]);
+      public static izquierdaScroll=trigger('entrada-izq', [
+        state('in', style({ transform: 'translateX(0)' })),
+        state('out', style({ transform: 'translateX(-100%)' })),
+        transition('out <=> in', [
+          animate(500)
+        ]),
+  
+        transition('void => *', [
+          style({ transform: 'translateX(-100%)' }),
+          animate(500)
+        ]),
+        transition('* => void', [
+          animate(500, style({ transform: 'translateX(100%)' }))
+        ])
+  
       ])
 }
