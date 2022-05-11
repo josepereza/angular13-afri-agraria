@@ -27,19 +27,19 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
       state('out', style({ opacity: 0 })),
 
       transition('out => in', [
-        style({ opacity: 0 }),
-        animate('2.7s 200ms ease-out', style({ opacity: 1 }))
+        style({ opacity: 0 ,transform:'scale(0)'}),
+        animate('2.5s 200ms ease-out', style({ opacity: 1,transform:'scale(1)' }))
       ]),
       transition('in => out', [
         style({ opacity: 0 }),
         animate('2.7s 200ms ease-out', style({ opacity: 0 }))
       ]),
       transition('void => *', [
-        style({ opacity: 0 }),
-        animate('2.7s 200ms ease-out', style({ opacity: 1 }))
+        style({ opacity: 0,transform:'scale(0)' }),
+        animate('2.5s 200ms ease-out', style({ opacity: 1,transform:'scale(1)' }))
       ]),
       transition('* => void', [
-        animate('2.7s 200ms ease-out', style({ opacity: 0 }))
+        animate('2.5s 200ms ease-out', style({ opacity: 0 }))
       ]),
     ]),
 
@@ -48,16 +48,16 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
       state('out', style({ opacity: 0 })),
 
       transition('out => in', [
-        style({ opacity: 0 }),
-        animate('2.7s 800ms ease-out', style({ opacity: 1 }))
+        style({ opacity: 0 ,transform:'scale(0)'}),
+        animate('3.5s 900ms ease-out', style({ opacity: 1,transform:'scale(1)' }))
       ]),
       transition('in => out', [
         style({ opacity: 0 }),
-        animate('2.7s 800ms ease-out', style({ opacity: 0 }))
+        animate('2.7s 2100ms ease-out', style({ opacity: 0 }))
       ]),
       transition('void => *', [
-        style({ opacity: 0 }),
-        animate('2.7s 800ms ease-out', style({ opacity: 1 }))
+        style({ opacity: 0,transform: 'scale(0)' }),
+        animate('3.5s 2100ms ease-out', style({ opacity: 1,transform:'scale(1)' }))
       ]),
       transition('* => void', [
         animate('2.7s 200ms ease-out', style({ opacity: 0 }))
