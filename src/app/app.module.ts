@@ -12,6 +12,8 @@ import { CartelComponent } from './components/cartel/cartel.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { IconosComponent } from './components/iconos/iconos.component';
 import { ShopComponent } from './pages/shop/shop.component';
+import { FormularioComponent } from './pages/formulario/formulario.component';
+import { ProductosComponent } from './pages/productos/productos.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ShopComponent } from './pages/shop/shop.component';
     CartelComponent,
     FooterComponent,
     IconosComponent,
-    ShopComponent
+    ShopComponent,
+    FormularioComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,

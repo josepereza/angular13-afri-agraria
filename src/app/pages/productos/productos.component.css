@@ -1,0 +1,9 @@
+.cabecera {
+    width: 70%;
+    text-align: center;
+    
+}
+hr{
+    border: 0;
+  border-top: 3px solid rgb(240, 243, 169);
+}

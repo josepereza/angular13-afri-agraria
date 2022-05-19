@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
+import { FormularioComponent } from './pages/formulario/formulario.component';
+import { ProductosComponent } from './pages/productos/productos.component';
 import { ShopComponent } from './pages/shop/shop.component';
 
 const routes: Routes = [
@@ -12,6 +14,12 @@ const routes: Routes = [
   },
   {
     path:'shop', component:ShopComponent
+  },
+  {
+    path:'formulario', component:FormularioComponent
+  },
+  {
+    path:'productos', component:ProductosComponent
   }
 ];
 
