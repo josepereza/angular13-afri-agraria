@@ -14,6 +14,7 @@ import { IconosComponent } from './components/iconos/iconos.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { ProductosComponent } from './pages/productos/productos.component';
+import { DescripcionComponent } from './pages/descripcion/descripcion.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProductosComponent } from './pages/productos/productos.component';
     IconosComponent,
     ShopComponent,
     FormularioComponent,
-    ProductosComponent
+    ProductosComponent,
+    DescripcionComponent
   ],
   imports: [
     BrowserModule,

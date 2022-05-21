@@ -1,0 +1,23 @@
+.pelo {
+    height: 100vh;
+
+    background-image: url('../../../assets/images/pelo.jpg');
+    background-position:center center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+
+}
+.edad {
+    height: 100vh;
+
+    background-image: url('../../../assets/images/edad.jpg');
+    background-position:left;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.texto-edad{
+    width: 70%;
+}
+
