@@ -14,7 +14,8 @@ import { IconosComponent } from './components/iconos/iconos.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { ProductosComponent } from './pages/productos/productos.component';
-import { DescripcionComponent } from './pages/descripcion/descripcion.component';
+import { BaobabDescComponent } from './pages/descripcion/baobab-desc.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DescripcionComponent } from './pages/descripcion/descripcion.component'
     ShopComponent,
     FormularioComponent,
     ProductosComponent,
-    DescripcionComponent
+    BaobabDescComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

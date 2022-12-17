@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/interfaces/product';
+import { CartService } from 'src/app/services/cart.service';
+import { ProductsService } from 'src/app/services/products.service';
 import {Animations} from "../../shared/animations/basic-animations";
 @Component({
   selector: 'app-shop',
@@ -10,10 +13,15 @@ import {Animations} from "../../shared/animations/basic-animations";
       ],
 })
 export class ShopComponent implements OnInit {
+products:Product[]=[]  
 cantidad:number=1;
-  constructor() { }
+  constructor(private cartService:CartService, private productsService:ProductsService) { }
 
   ngOnInit(): void {
+   this.products=this.productsService.getAll()
   }
-
+  addtocart(item: any){
+    item.cantidad=this.cantidad
+    this.cartService.addtoCart(item);
+  }
 }

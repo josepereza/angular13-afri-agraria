@@ -1,33 +1,99 @@
 <div class="container">
-    <div class="row producto vh-100 justify-content-center align-items-center">
-        <div @fadeIn class="col-md-6 text-center">
-         <img src="../../../assets/productos/baobab3.jpg" width="80%" alt="">
-         <div class="">
-          <a  class="btn btn-primary w-100 mb-3" routerLink="/descripcion">Detalles Producto</a>
+  <div *ngFor="let item of products" class="row producto vh-100 justify-content-center align-items-center">
+    <div @fadeIn class="col-md-6 text-center">
+      <img src="{{item.imagen}}" width="80%" alt="" />
+      <div class="">
+        <a class="btn btn-primary w-100 mb-3" routerLink="/descripcion"
+          >Detalles Producto</a
+        >
+      </div>
+    </div>
+    <div @fadeIn class="col-md-6 text-white">
+      <div class="card border-primary mx-auto mb-3 p-2">
+        <span class="display-5">21,00 € &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Total:{{
+            21 * cantidad
+          }}
+          €</span
+        >
+
+        <div class="row g-3">
+          <div class="text-white mt-4">
+            <span class="me-2">Cantidad</span>
+            <button class="btn btn-primary" (click)="cantidad = cantidad + 1">
+              +
+            </button>
+            <span class="me-2 ms-2">{{ cantidad }}</span>
+            <button class="btn btn-primary" (click)="cantidad = cantidad - 1">
+              -
+            </button>
+          </div>
+          <div class="">
+            <button class="btn btn-primary" (click)="addtocart(item)">
+              Agregar al carrito
+            </button>
+          </div>
         </div>
-        </div>
-        <div @fadeIn class="col-md-6   text-white"  >
-            <div class="card border-primary  mx-auto  mb-3 p-2" >
-                <span class=" display-5">21,00 € &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;    Total:{{21*cantidad}} €</span>
-               
-                <div class="row g-3">
-                   
-                    <div class=" text-white mt-4">
-                        <span class="me-2">Cantidad</span>
-                    <button class="btn btn-primary " (click)="cantidad=cantidad+1;">+</button>
-                    <span class="me-2 ms-2">{{cantidad}}</span>
-                     <button class="btn btn-primary" (click)="cantidad=cantidad-1;">-</button> 
-                    
-                    </div>
-                    <div class="">
-                      <a  class="btn btn-primary w-100 mb-3" routerLink="/formulario">Comprar</a>
-                    </div>
-                  </div>
-                <div class="card-body text-primary">
-                  <h5 class="card-title">BAOBAB</h5>
-                  <p class="card-text">Valorado durante siglos en África por sus propiedades hidratantes, el aceite de baobab es un ingrediente ideal para su uso en productos para el cuidado de la piel y el cabello. Rápida absorción, no obstruye los poros y es muy hidratante y calmante.</p>
-                </div>
-              </div>
+        <div class="card-body text-primary">
+          <h5 class="card-title">BAOBAB</h5>
+          <p class="card-text">
+            Valorado durante siglos en África por sus propiedades hidratantes,
+            el aceite de baobab es un ingrediente ideal para su uso en productos
+            para el cuidado de la piel y el cabello. Rápida absorción, no
+            obstruye los poros y es muy hidratante y calmante.
+          </p>
         </div>
       </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- <div class="row producto vh-100 justify-content-center align-items-center">
+    <div @fadeIn class="col-md-6 text-center">
+      <img src="../../../assets/productos/anacardos.jpg" width="80%" alt="" />
+      <div class="">
+        <a class="btn btn-primary w-100 mb-3" routerLink="/descripcion"
+          >Detalles Producto</a
+        >
+      </div>
+    </div>
+    <div @fadeIn class="col-md-6 text-white">
+      <div class="card border-primary mx-auto mb-3 p-2">
+        <span class="display-5"
+          >21,00 € &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Total:{{
+            21 * cantidad
+          }}
+          €</span
+        >
+
+        <div class="row g-3">
+          <div class="text-white mt-4">
+            <span class="me-2">Cantidad</span>
+            <button class="btn btn-primary" (click)="cantidad = cantidad + 1">
+              +
+            </button>
+            <span class="me-2 ms-2">{{ cantidad }}</span>
+            <button class="btn btn-primary" (click)="cantidad = cantidad - 1">
+              -
+            </button>
+          </div>
+          <div class="">
+            <button class="btn btn-primary" (click)="addtocart(item)">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+        <div class="card-body text-primary">
+          <h5 class="card-title">BAOBAB</h5>
+          <p class="card-text">
+            Valorado durante siglos en África por sus propiedades hidratantes,
+            el aceite de baobab es un ingrediente ideal para su uso en productos
+            para el cuidado de la piel y el cabello. Rápida absorción, no
+            obstruye los poros y es muy hidratante y calmante.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> -->
 </div>
