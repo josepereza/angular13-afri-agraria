@@ -4,6 +4,6 @@ export interface Product {
     descripcion:string,
     precio:number,
     imagen:string,
-    cantidad?:number
+    cantidad:number
 
 }

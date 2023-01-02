@@ -14,14 +14,15 @@ import {Animations} from "../../shared/animations/basic-animations";
 })
 export class ShopComponent implements OnInit {
 products:Product[]=[]  
-cantidad:number=1;
-  constructor(private cartService:CartService, private productsService:ProductsService) { }
+cantidad=0;
+constructor(private cartService:CartService, private productsService:ProductsService) { }
 
   ngOnInit(): void {
    this.products=this.productsService.getAll()
+   
   }
   addtocart(item: any){
-    item.cantidad=this.cantidad
-    this.cartService.addtoCart(item);
+       this.cartService.addtoCart(item);
   }
+  
 }

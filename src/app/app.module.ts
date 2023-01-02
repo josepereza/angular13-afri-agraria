@@ -16,6 +16,7 @@ import { FormularioComponent } from './pages/formulario/formulario.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { BaobabDescComponent } from './pages/descripcion/baobab-desc.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { CantidadPipe } from './pipes/cantidad.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CartComponent } from './pages/cart/cart.component';
     FormularioComponent,
     ProductosComponent,
     BaobabDescComponent,
-    CartComponent
+    CartComponent,
+    CantidadPipe
   ],
   imports: [
     BrowserModule,
