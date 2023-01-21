@@ -1,6 +1,11 @@
+
 p{
     color: aliceblue;
 }
-td {
+td,th {
     color: beige;
+}
+.pagar {
+    padding: 40px;
+    font-size: 2em;
 }

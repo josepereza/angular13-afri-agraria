@@ -1,90 +1,240 @@
 <div class="container text-white">
-    <br><br>
-    
-    <div class="row">
-        <div class="col-md-6 mt-5">
-            <h2>Facturacion</h2>
-            <div class="mb-3">
-                <div class="row">
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Apellido</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                          </div>
-                    </div>
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                          </div>
-                    </div>
-                </div>
+  <br /><br />
+
+  <div class="row">
+    <div class="col-md-6 mt-5">
+      <h2>Envio</h2>
+      <div class="mb-3">
+        <form [formGroup]="clienteForm"  (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Apellido</label
+                >
+                <input formControlName="apellido"
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="apellido"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Nombre</label
+                >
+                <input
+                formControlName="nombre"
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="name@example.com"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="direccion" class="form-label">Direccion</label>
+            <input
+            formControlName="direccion"
+              type="text"
+              class="form-control"
+              id="direccion"
+              placeholder="C/Alexander, 4"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="cidudad" class="form-label">Ciudad</label>
+            <input
+            formControlName="ciudad"
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Madrid"
+            />
+          </div>
+          <div class="row mb-3">
+            <label for="Pais" class="form-label">Pais</label>
+
+            <div class="col">
+              <select [required]="true"
+            
+              formControlName="pais"
+                id="pais"
+                class="form-select"
+                aria-label="Default select example"
+              >
+                <option value="Suiza"  >Suiza</option>
+                <option value="Deutsland">Deutsland</option>
+                <option value="England">England</option>
+                <option value="Espaǹa">Espaǹa</option>
+              </select>
+            </div>
+          </div>
+      
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                <h2>Facturacion</h2>
+
+                <span class="fw-lighter ms-3"
+                  >Dejarlo en blanco si es la misma direccion que el envio
+                </span>
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                  <div class="row">
+                    <div class="col">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Apellido</label
+                        >
+                        <input
+                        formControlName="apellido_fact"
+                          type="email"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder="name@example.com"
+                        />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Nombre</label
+                        >
+                        <input
+                        formControlName="nombre_fact"
+                          type="email"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder="name@example.com"
+                        />
+                      </div>
+                    </div>
                   </div>
                   <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="name@example.com"
+                    />
                   </div>
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                <div class="row">
+                  <div class="mb-3">
+                    <label for="direccion" class="form-label">Direccion</label>
+                    <input
+                    formControlName="direccion_fact"
+                      type="text"
+                      class="form-control"
+                      id="direccion"
+                      placeholder="C/Alexander, 4"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="cidudad" class="form-label">Ciudad</label>
+                    <input
+                    formControlName="ciudad_fact"
+                      type="text"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Madrid"
+                    />
+                  </div>
+                  <div class="row mb-3">
+                    <label for="Pais" class="form-label">Pais</label>
+
                     <div class="col">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                          </div>
+                      <select
+                      formControlName="pais_fact"
+                        id="pais"
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected>Pais</option>
+                        <option value="Deutsland">Deutsland</option>
+                        <option value="England">England</option>
+                        <option value="Espaǹa">Espaǹa</option>
+                      </select>
                     </div>
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                          </div>
-                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Default radio
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Default checked radio
-                </label>
-              </div>
+          </div>
         </div>
-        <div class="col-sm-6 mt-5">
-            <h2>Envio</h2>
-            <div class="mb-3">
-                <div class="row">
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                          </div>
-                    </div>
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                          </div>
-                    </div>
-                </div>
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-              </div>
-        </div>
+        <button class="btn btn-primary" type="submit">Aceptar</button>
+      </form>
+      </div>
     </div>
+    <div class="col-md-6 mt-5">pago
+      <div class="card" style="width: 18rem; color: black;">
+        <div class="card-body">
+          <h5 class="card-title">Datos de envio</h5>
+          <p class="card-text">Apellidos :{{envio.apellido}}</p>
+          <p class="card-text">Nombre :{{envio.nombre}}</p>
+          <p class="card-text">Email :{{envio.email}}</p>
+          <p class="card-text">Ciudad :{{envio.ciudad}}</p>
+          <p class="card-text">Pais :{{envio.pais}}</p>
+
+         
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; color: black;"> 
+        <h5>Total a pagar : {{cartService.getTotalPrice()}}</h5>
+      </div>
+
+      <h2>Collection Payment Intent</h2>
+      <div class="container">
+      <div class="card">
+        <ngx-stripe-card
+            [options]="cardOptions"
+            [elementsOptions]="elementsOptions"
+          ></ngx-stripe-card>
+          <button class="btn btn-primary" type="submit" (click)="pay()">
+            PAY
+          </button>
+      </div>
+          
+          
+        </div>
+        
+    
+
+
+
+    </div>
+  </div>
 </div>

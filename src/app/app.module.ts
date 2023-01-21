@@ -17,6 +17,11 @@ import { ProductosComponent } from './pages/productos/productos.component';
 import { BaobabDescComponent } from './pages/descripcion/baobab-desc.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { CantidadPipe } from './pipes/cantidad.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxStripeModule } from 'ngx-stripe';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -38,7 +43,11 @@ import { CantidadPipe } from './pipes/cantidad.pipe';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ScrollEventModule
+    ScrollEventModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgxStripeModule.forRoot('pk_test_51KwttKJhfdXMP2PM1eyZwmyTnW37LyaYzXB4xe0Hn13Y1NHPNUj4FVlVg4NoGLym1SO38P5WJrM0UbgWbMKScooI0000eFuVzO'),
   ],
   providers: [
     {provide: SCROLL_EVENT_TIME, useValue: 500}

@@ -6,8 +6,8 @@
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse " id="navbarNav">
-            <ul class="navbar-nav d-flex w-100 justify-content-center">
+        <div  class="collapse navbar-collapse " id="navbarNav">
+            <ul   class="navbar-nav d-flex w-100 justify-content-center ">
                 <li class="nav-item ms-3">
                     <a class="nav-link active " aria-current="page" href="#">Home</a>
                 </li>
@@ -18,8 +18,14 @@
                     <a class="nav-link" href="#descubre">Descubre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/shop">Shop</a>
+                    <a  data-toggle="dropdown" class="nav-link" routerLink="/shop">Shop</a>
                 </li>
+                <li>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">Profile
+                    
+                </button>          
+                  </li>
             </ul>
            
         </div>
@@ -28,4 +34,4 @@
             <div style="font-size: 10px;" class="badge bg-danger">{{'totalItem'}}</div>
         </button>
     </div>
-</nav>
+</nav> 
