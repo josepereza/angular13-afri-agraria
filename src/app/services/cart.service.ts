@@ -9,8 +9,11 @@ export class CartService {
   public cartItemList : any =[]
   public productList = new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>("");
-
+  public totalPago=0;
   constructor() { }
+  get totalPagoCompra(){
+    return this.totalPago
+  }
   getProducts(){
     return this.productList.asObservable();
   }

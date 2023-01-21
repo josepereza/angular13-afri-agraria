@@ -78,7 +78,7 @@
                 aria-label="Default select example"
               >
                 <option value="Suiza"  >Suiza</option>
-                <option value="Deutsland">Deutsland</option>
+                <option value="Deutschland">Deutschland</option>
                 <option value="England">England</option>
                 <option value="Espaǹa">Espaǹa</option>
               </select>
@@ -184,7 +184,7 @@
                         aria-label="Default select example"
                       >
                         <option selected>Pais</option>
-                        <option value="Deutsland">Deutsland</option>
+                        <option value="Deutschland">Deutschland</option>
                         <option value="England">England</option>
                         <option value="Espaǹa">Espaǹa</option>
                       </select>
@@ -213,7 +213,9 @@
         </div>
       </div>
       <div class="card" style="width: 18rem; color: black;"> 
-        <h5>Total a pagar : {{cartService.getTotalPrice()}}</h5>
+        <h5>Item : {{cartService.getTotalPrice()}}</h5>
+         <h5>Portes : {{portes}}</h5>
+        <h5>Total a pagar : {{cartService.totalPagoCompra}}</h5>
       </div>
 
       <h2>Collection Payment Intent</h2>

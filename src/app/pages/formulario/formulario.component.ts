@@ -9,7 +9,8 @@ import {
 } from '@stripe/stripe-js';
 import { Observable, switchMap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-
+const ue=['Francia','Spain','Deutschland'];
+const nonUe=['Suiza','England']
 
 @Component({
   selector: 'app-formulario',
@@ -32,6 +33,7 @@ export class FormularioComponent implements OnInit {
       }
     }
   };
+  portes=0;
   elementsOptions: StripeElementsOptions = {
     locale: 'es'
   };
@@ -79,12 +81,18 @@ if (this.clienteForm.value.direccion_fact){
   this.envio.ciudad=this.clienteForm.value.ciudad;
   this.envio.pais=this.clienteForm.value.pais
 }
-
+ if (ue.includes(this.envio.pais)){
+  this.portes=5
+  this.cartService.totalPago=5+this.cartService.getTotalPrice()
+ }else {
+  this.portes=8
+  this.cartService.totalPago=8+this.cartService.getTotalPrice()
+ }
 }
 
 pay(): void {
  
-    this.createPaymentIntent(this.cartService.getTotalPrice())
+    this.createPaymentIntent(this.cartService.totalPagoCompra)
       .pipe(
         switchMap((pi) =>
           this.stripeService.confirmCardPayment(pi.client_secret!, {
@@ -115,7 +123,7 @@ createPaymentIntent(amount: number): Observable<PaymentIntent> {
   return this.http.post<PaymentIntent>(
     `http://localhost:3000/create-payment-intent`,
     { amount }
-  );
+  )  ;
 }
 
 }
