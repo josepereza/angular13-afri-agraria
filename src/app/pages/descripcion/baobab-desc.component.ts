@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import  {Location} from '@angular/common'
 @Component({
   selector: 'app-baobabDesc',
   templateUrl: './baobab-desc.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BaobabDescComponent implements OnInit {
 
-  constructor() { }
+  constructor(private location:Location) { }
 
   ngOnInit(): void {
+  }
+  regresar(){
+    this.location.back();
   }
 
 }
