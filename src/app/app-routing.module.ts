@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { AnacardosDescComponent } from './pages/descripcion/anacardos-desc.component';
 import { BaobabDescComponent } from './pages/descripcion/baobab-desc.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { ProductosComponent } from './pages/productos/productos.component';
@@ -25,6 +26,9 @@ const routes: Routes = [
   },
   {
     path:'baobab-desc', component:BaobabDescComponent
+  },
+  {
+    path:'anacardos-desc', component:AnacardosDescComponent
   },
   {
     path:'cart', component:CartComponent

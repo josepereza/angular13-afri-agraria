@@ -20,6 +20,7 @@ import { CantidadPipe } from './pipes/cantidad.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxStripeModule } from 'ngx-stripe';
 import { HttpClientModule } from '@angular/common/http';
+import { AnacardosDescComponent } from './pages/descripcion/anacardos-desc.component';
 
 
 
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProductosComponent,
     BaobabDescComponent,
     CartComponent,
-    CantidadPipe
+    CantidadPipe,
+    AnacardosDescComponent,
   ],
   imports: [
     BrowserModule,
