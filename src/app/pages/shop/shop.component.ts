@@ -15,7 +15,8 @@ import {Animations} from "../../shared/animations/basic-animations";
 export class ShopComponent implements OnInit {
 products:Product[]=[]  
 cantidad=0;
-constructor(private cartService:CartService, private productsService:ProductsService) { }
+
+constructor(public cartService:CartService, private productsService:ProductsService) { }
 
   ngOnInit(): void {
    this.products=this.productsService.getAll()
