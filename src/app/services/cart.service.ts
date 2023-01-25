@@ -27,11 +27,11 @@ export class CartService {
   addtoCart(product : any){
     this.totalItem=0
     const isProductInCart = this.cartItemList.find((data:any) => data.codigo === product.codigo)
-   
+   //console.log('producto en carrito',isProductInCart)
     if (isProductInCart) {
-      isProductInCart.cantidad += isProductInCart.cantidad+product.cantidad;
+      isProductInCart.cantidad += 1;
     } else {
-      this.cartItemList.push( product)
+      this.cartItemList.push( {...product,cantidad:1})
     }
 this.productList.next(this.cartItemList);
     this.getTotalPrice();
@@ -55,7 +55,7 @@ this.totalItem$.next(this.totalItem)
   }
   removeCartItem(product: any){
     this.cartItemList.map((a:any, index:any)=>{
-      if(product.id=== a.id){
+      if(product.codigo=== a.codigo){
         this.cartItemList.splice(index,1);
       }
     })
