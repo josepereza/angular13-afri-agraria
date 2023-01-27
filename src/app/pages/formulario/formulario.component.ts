@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { UntypedFormBuilder } from '@angular/forms';
 import { CartService } from 'src/app/services/cart.service';
 import { StripeService, StripeCardComponent } from 'ngx-stripe';
 import {
@@ -61,7 +61,7 @@ clienteForm=this.fb.group({
   pais_fact:['Suiza']
 })
   
-  constructor(private http:HttpClient, private fb:FormBuilder, public cartService:CartService, private stripeService: StripeService) { }
+  constructor(private http:HttpClient, private fb:UntypedFormBuilder, public cartService:CartService, private stripeService: StripeService) { }
 
   ngOnInit(): void {
   }
