@@ -24,5 +24,23 @@
 "PARAQUIENES":"Für diejenigen, die bereits in der Gewohnheit sind, Haarpflegebehandlungen zu Hause durchzuführen, kann Baobab-Öl leicht zur Maske hinzugefügt werden, um ihre Vorteile zu potenzieren, insbesondere was die Feuchtigkeit betrifft. Anwendung: 3 bis 4 Tropfen Baobab-Öl der Haarmaske vor dem Auftragen auf das Haar hinzufügen.",
 "CUIDADO":"Nagelpflege",
 "ELACEITEDE":"Baobab-Öl bietet allgemeine Vorteile, von der Feuchtigkeit der Nagelhaut bis hin zur Stärkung der Nägel und dem Vermeiden von leichtem Ausfransen. Anwendung: Täglich ein wenig Baobab-Öl direkt auf die Nägel auftragen, ohne danach auszuspülen."
+    },
+    "ANAC-DESC":{
+      "LANUEZ":"Die gesunde Nuss, die dich mit Energie füllen wird",
+      "LOSA":"Die Anacarde sind die Nüsse des Anacardium-Baumes. Dieser Baum stammt ursprünglich aus Südamerika und wird hauptsächlich in Brasilien, Indien und Nigeria angebaut. Anacarde sind kleine Nüsse mit einer harten Schale, die sich in einer voller Harnsaure befindet. Diese Nüsse sind essbar und haben einen süßen und leicht salzigen Geschmack. Anacarde werden häufig in der Küche zum Backen von Desserts, Soßen, Pasten und als gesundes Snack verwendet. Sie werden auch in der Kosmetikindustrie und in der Herstellung von Haarpflegeprodukten verwendet.",
+      "BENE":"Vorteile",
+      "BENE1":"Anacarde sind reich an ballaststoffreicher Ernährung, was helfen kann, den Darmtransit und die Verdauung zu regulieren.",
+      "BENE2":"Sie enthalten viel Magnesium, was helfen kann, Stress abzubauen, die Herzgesundheit zu verbessern und die Knochen zu stärken.",
+      "BENE3":"Anacarde sind eine hervorragende Quelle für Vitamin E, ein starkes Antioxidans, das hilft, die Haut vor Sonnenschäden zu schützen und vorzeitiges Altern zu verhindern.",
+      "BENE4":"Sie enthalten viel Mangan, ein essentielles Mineral für die Bildung von Knochen und Bindegewebe.",
+      "BENE5":"Der Oleinsäure in Anacarde kann helfen, schlechtes Cholesterin zu reduzieren und die Herzgesundheit zu verbessern.",
+      "BENE6":"Sie sind reich an Kalium, einem Mineral, das hilft, den Blutdruck zu kontrollieren und das Flüssigkeitsgleichgewicht im Körper aufrechtzuerhalten.",
+      "BENE7":"Sie sind auch reich an Folsäure, ein wichtiger Nährstoff für die Gesundheit des Nervensystems und die Bildung von roten Blutkörperchen, und an Antioxidantien, insbesondere Polyphenolen und Carotenoide, die helfen können, Zellschäden zu verhindern und die Gesundheit im Allgemeinen zu verbessern. ",
+      "COMPRAR":"Kaufen",
+      "REGRESAR":"Zurückkehren"
+      },
+      "SHOP":{
+        "AGRE":"In den Warenkorb legen",
+        "DETA" :"Produktdetails"
     }
   }

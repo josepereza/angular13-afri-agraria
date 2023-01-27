@@ -3,7 +3,7 @@ export const Products=[
     codigo:1,
     nombre:'Baobab',
     precio:24.99,
-    descripcion: 'Valorado durante siglos en África por sus propiedades hidratantes, el aceite de baobab es un ngrediente ideal para su uso en productos para el cuidado de la piel y el cabello.Rápida absorción, no obstruye os poros y es muy hidratante y calmante.',
+    descripcion: 'Plegeöl / Körper & Haar;  Skin & Hair ; 100% Baobaböl; Kalt Gepresst; Cold pressed; 100 ml',
     imagen:"./assets/productos/baobab3.jpg",
     link:"baobab-desc",
     cantidad:0
@@ -12,7 +12,7 @@ export const Products=[
     codigo:2,
     nombre:'Anacardos',
     precio:5,
-    descripcion: 'Uno de los beneficios de los anacardos es que ya tiene una dosis significativa de hierro, importante para estimular el sistema inmunológico. El mineral es importante para prevenir la anemia y la falta de energía. Hay varios beneficios de los anacardos, incluida la salud ocular.',
+    descripcion: 'Energie: 2445 kj/589 kcal; Fett/Grasa:43,4g; davos ges. Fettsäuren:8g ; Kohlehydrate: 25,1g; davon Zucker:6,3g ; Eiweiss:21,9g ; Salz: 0,003g',
     imagen:'./assets/productos/anacardos.jpg',
     link:'anacardos-desc',
     cantidad:0

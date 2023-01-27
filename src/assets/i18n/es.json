@@ -25,5 +25,24 @@
         "CUIDADO":"Cuidado de uñas",
         "ELACEITEDE":"El aceite de baobab ofrece beneficios generales, que van desde hidratar la cutícula hasta fortalecer las uñas, evitando que se enfríen fácilmente. Modo de empleo: aplicar diariamente un poco de aceite de Baobab directamente sobre las uñas sin necesidad de enjuagar después."
 
-     }
-}
+     },
+     "ANAC-DESC":{
+        "LANUEZ":"La nuez saludable que te llenará de energía",
+         "LOSA":"Los anacardos son las nueces de la planta del anacardo. Esta planta es originaria de América del Sur y se cultiva principalmente en Brasil, India y Nigeria. Los anacardos son pequeñas nueces con una cáscara dura que se encuentra dentro de una cáscara llena de ácido urico. Estas nueces son comestibles y tienen un sabor dulce y ligeramente salado. Los anacardos se utilizan comúnmente en la cocina para hacer postres, salsas, pastas y como una merienda saludable,también son utilizados en la industria cosmética y en la elaboración de productos para el cuidado del cabello.",
+         "BENE":"Beneficios",
+         "BENE1":"Los anacardos son ricos en fibra dietética, lo que puede ayudar a regular el tránsito intestinal y mejorar la digestión. ",
+         "BENE2":"Contienen una gran cantidad de magnesio, lo que puede ayudar a reducir el estrés, mejorar la salud del corazón y fortalecer los huesos. ",
+         "BENE3":"Los anacardos son una excelente fuente de vitamina E, un potente antioxidante que ayuda a proteger la piel de los daños del sol y a prevenir el envejecimiento prematuro. ",
+         "BENE4":"Contienen una gran cantidad de manganeso, un mineral esencial para la formación de huesos y tejidos conectivos. ",
+         "BENE5":"El ácido oleico presente en los anacardos puede ayudar a reducir el colesterol malo y mejorar la salud del corazón ",
+         "BENE6":"Son ricos en potasio, un mineral que ayuda a controlar la presión arterial y a mantener el equilibrio del líquido en el cuerpo. ",
+         "BENE7":"Tambien son ricos en ácido fólico, un nutriente esencial para la salud del sistema nervioso y para la formación de glóbulos rojos, y en antioxidantes, especialmente polifenoles y carotenoides, estos ayudan a prevenir el daño celular y mejorar la salud en general. ",
+         "COMPRAR":"Comprar",
+         "REGRESAR":"Regresar"
+
+     },
+    "SHOP":{
+        "AGRE":"Agregar al Carrito",
+        "DETA" :"Detalles Producto."
+    }
+} 

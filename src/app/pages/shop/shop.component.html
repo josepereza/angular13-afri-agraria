@@ -4,7 +4,7 @@
       <img src="{{item.imagen}}" width="80%" alt="" />
       <div class="">
         <a class="btn btn-primary w-100 mb-3" routerLink="/{{item.link}}"
-          >Detalles Producto</a
+          >{{"SHOP.DETA" | translate}}</a
         >
       </div>
     </div>
@@ -20,7 +20,7 @@
          
           <div class="">
             <button class="btn btn-primary" (click)="addtocart(item)">
-              Agregar al carrito
+              {{"SHOP.AGRE" | translate}}
             </button>
           </div>
         </div>
