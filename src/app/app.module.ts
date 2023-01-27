@@ -19,11 +19,14 @@ import { CartComponent } from './pages/cart/cart.component';
 import { CantidadPipe } from './pipes/cantidad.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxStripeModule } from 'ngx-stripe';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HttpClient } from '@angular/common/http';
 import { AnacardosDescComponent } from './pages/descripcion/anacardos-desc.component';
 
-
-
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +53,13 @@ import { AnacardosDescComponent } from './pages/descripcion/anacardos-desc.compo
     ReactiveFormsModule,
     HttpClientModule,
     NgxStripeModule.forRoot('pk_test_51KwttKJhfdXMP2PM1eyZwmyTnW37LyaYzXB4xe0Hn13Y1NHPNUj4FVlVg4NoGLym1SO38P5WJrM0UbgWbMKScooI0000eFuVzO'),
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })  
   ],
   providers: [
     {provide: SCROLL_EVENT_TIME, useValue: 500}

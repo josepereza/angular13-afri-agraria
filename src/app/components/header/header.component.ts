@@ -69,8 +69,8 @@ export class HeaderComponent implements OnInit {
   isOpen: boolean = true;
   isOpen2: boolean = true;
   constructor() {
-
-
+    
+    
   }
 
   ngOnInit(): void {

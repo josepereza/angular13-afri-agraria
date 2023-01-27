@@ -29,7 +29,18 @@
             </ul>
            
         </div>
-        <button routerLink="cart" class="btn btn-primary">
+       <label style="display: flex;">        
+            <i style="font-size: 20px;color:white" class="bi-globe2"></i>
+
+
+            <select  class="form-select" #langSelect (change)="changeLang(langSelect.value)">
+              <option *ngFor="let lang of langs" [value]="lang">
+                {{ lang }}
+              </option>
+            </select>
+       </label>
+
+        <button routerLink="cart" class="btn btn-primary ms-2">
             <i style="font-size: 30px;" class="bi-cart"></i>
             <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
         </button>
