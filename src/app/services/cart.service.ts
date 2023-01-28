@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
+import {Products} from '../../assets/productos/products';
 
 @Injectable({
   providedIn: 'root'
@@ -57,8 +58,13 @@ this.totalItem$.next(this.totalItem)
     this.cartItemList.map((a:any, index:any)=>{
       if(product.codigo=== a.codigo){
         this.cartItemList.splice(index,1);
+        this.totalItem=this.totalItem-a.cantidad
+        this.totalItem$.next(this.totalItem)
       }
     })
+    let producto=Products.find((item)=>item.codigo==product.codigo)
+    producto!.cantidad=0;
+
     this.productList.next(this.cartItemList);
   }
   removeAllCart(){

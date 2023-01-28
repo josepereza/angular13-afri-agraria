@@ -28,9 +28,9 @@
                         </tr>
                         <tr>
                             <td><button (click)="emptycart()" class="btn btn-danger">Vaciar Carrito</button></td>
-                            <td><button routerLink="/products" class="btn btn-primary">Continuar Con la compra</button></td>
-                            <td><button class="btn btn-success">Sair</button></td>
-                            <td class="fs-2"><strong> Total : ${{grandTotal}}</strong></td>
+                            <td><button routerLink="/shop" class="btn btn-primary">Continuar Con la compra</button></td>
+                            <td><button class="btn btn-success">Salir</button></td>
+                            <td class="fs-2"><strong> Total : {{grandTotal | currency: 'EUR'}} </strong></td>
                         </tr>
                         <button class="pagar btn btn-primary" routerLink="/formulario">Pagar</button>
                     </tbody>
