@@ -24,6 +24,8 @@ import { AnacardosDescComponent } from './pages/descripcion/anacardos-desc.compo
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ThankyouComponent } from './pages/thankyou/thankyou.component';
+import { CheckoutErrorComponent } from './pages/checkout-error/checkout-error.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -43,6 +45,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     CartComponent,
     CantidadPipe,
     AnacardosDescComponent,
+    ThankyouComponent,
+    CheckoutErrorComponent,
   ],
   imports: [
     BrowserModule,

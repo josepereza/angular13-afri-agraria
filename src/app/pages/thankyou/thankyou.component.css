@@ -1,0 +1,31 @@
+.container {
+  margin-top: 150px;
+
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+h1 {
+  margin-top: 50px;
+  color: aliceblue;
+}
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: aliceblue;
+}
+
+.izquierda {
+  margin: auto;
+}
+.derecha {
+  margin: auto;
+}
+@media screen and (max-width: 580px) {
+   .container {
+      grid-template-columns: 1fr;
+
+   }
+}

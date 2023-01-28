@@ -9,6 +9,7 @@ import {
 } from '@stripe/stripe-js';
 import { Observable, switchMap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 const ue=['Francia','Spain','Deutschland'];
 const nonUe=['Suiza','England']
 
@@ -61,7 +62,10 @@ clienteForm=this.fb.group({
   pais_fact:['Suiza']
 })
   
-  constructor(private http:HttpClient, private fb:UntypedFormBuilder, public cartService:CartService, private stripeService: StripeService) { }
+  constructor(private http:HttpClient, private fb:UntypedFormBuilder,
+     public cartService:CartService, 
+     private router:Router,
+     private stripeService: StripeService) { }
 
   ngOnInit(): void {
   }
@@ -108,14 +112,16 @@ pay(): void {
       .subscribe((result) => {
         if (result.error) {
           // Show error to your customer (e.g., insufficient funds)
+          this.router.navigate(['/check-error'])
           console.log(result.error.message);
         } else {
           // The payment has been processed!
+          this.router.navigate(['/thankyou'])
           if (result.paymentIntent!.status === 'succeeded') {
             // Show a success message to your customer
           }
         }
-      });
+      }) ;
   } 
 
 
