@@ -68,7 +68,12 @@ this.totalItem$.next(this.totalItem)
     this.productList.next(this.cartItemList);
   }
   removeAllCart(){
+    Products.map((a:any, index:any)=>{
+     a.cantidad=0
+    })
     this.cartItemList = []
     this.productList.next(this.cartItemList);
+    this.totalItem=0;
+    this.totalItem$.next(this.totalItem)
   }
 }
