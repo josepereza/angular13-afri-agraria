@@ -42,5 +42,11 @@
       "SHOP":{
         "AGRE":"In den Warenkorb legen",
         "DETA" :"Produktdetails"
-    }
+    },
+    "CART":{
+      "VACIAR":"Wagen leeren",
+      "CONTINUAR":"Mit dem Kauf fortfahren",
+      "SALIR":"Verlassen",
+      "PAGAR" :"Bezahlen"
+      }
   }

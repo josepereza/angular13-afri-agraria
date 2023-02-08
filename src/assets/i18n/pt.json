@@ -42,7 +42,13 @@
     "SHOP":{
         "AGRE":"Adicionar ao carrinho",
         "DETA" :"Detalhes do produto"
-    }
+    },
+    "CART":{
+      "VACIAR":"Esvaziar Carrinho",
+      "CONTINUAR":"Continuar compra",
+      "SALIR":"Sair",
+      "PAGAR": "Pagar"
+      }
     
     
     

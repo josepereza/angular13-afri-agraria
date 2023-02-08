@@ -27,12 +27,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><button (click)="emptycart()" class="btn btn-danger">Vaciar Carrito</button></td>
-                            <td><button routerLink="/shop" class="btn btn-primary">Continuar Con la compra</button></td>
-                            <td><button class="btn btn-success">Salir</button></td>
+                            <td><button (click)="emptycart()" class="btn btn-danger">{{"CART.VACIAR" | translate}}</button></td>
+                            <td><button routerLink="/shop" class="btn btn-primary">{{"CART.CONTINUAR" | translate}}</button></td>
+                            <td><button class="btn btn-success">{{"CART.SALIR" | translate}}</button></td>
                             <td class="fs-2"><strong> Total : {{grandTotal | currency: 'EUR'}} </strong></td>
                         </tr>
-                        <button class="pagar btn btn-primary" routerLink="/formulario">Pagar</button>
+                        <button class="pagar btn btn-primary" routerLink="/formulario">{{"CART.PAGAR" | translate}}</button>
                     </tbody>
                 </table>
             </div>
@@ -47,13 +47,13 @@
         <br>
 
         <div class="card">
-            <h5 class="card-title">Mi Carrito</h5>
+            <h5 class="card-title">My Cart</h5>
         </div>
-        <div class="center">
-            <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
-            <h4>Su carrito está vacio!</h4>
-            <h6>Adicionar item ahora</h6>
-            <button routerLink="/products" class="btn btn-primary">Comprar Ahora</button>
+        <div class="center text-white">
+            <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" width="80%" alt="">
+            <h4>Your cart is empty.!</h4>
+            <h6>Add products now.</h6>
+            <button routerLink="/shop" class="btn btn-primary">Buy now</button>
         </div>
     </div>
 </ng-container>
