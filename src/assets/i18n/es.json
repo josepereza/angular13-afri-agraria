@@ -50,5 +50,12 @@
         "CONTINUAR":"Continuar con la compra",
         "SALIR": "Salir",
         "PAGAR": "Pagar"
+    },
+    "THANKYOU":{
+      "GRACIAS":"¡Gracias por su compra!",
+      "AGRADECEMOS":"Le agradecemos por elegir nuestra tienda en línea. Estamos seguros de que disfrutará de su compra.",
+      "ENVIADO" : "Se ha enviado un correo electrónico de confirmación a la dirección proporcionada. Si tiene alguna pregunta o problema, no dude en ponerse en contacto con nosotros.",
+      "DENUEVO" :"¡Gracias de nuevo por elegir nuestra tienda!"
+
     }
 } 
