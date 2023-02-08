@@ -48,5 +48,11 @@
       "CONTINUAR":"Mit dem Kauf fortfahren",
       "SALIR":"Verlassen",
       "PAGAR" :"Bezahlen"
-      }
+      },
+      "THANKYOU":{
+        "GRACIAS":"Vielen Dank für Ihren Kauf!",
+        "AGRADECEMOS":"Wir danken Ihnen, dass Sie unseren Online-Shop gewählt haben. Wir sind sicher, dass Sie Ihren Kauf genießen werden.",
+        "ENVIADO":"Eine Bestätigungs-E-Mail wurde an die angegebene Adresse gesendet. Wenn Sie Fragen oder Probleme haben, zögern Sie nicht, uns zu kontaktieren.",
+        "DENUEVO":"Vielen Dank noch einmal, dass Sie unseren Shop gewählt haben!"
+        }
   }

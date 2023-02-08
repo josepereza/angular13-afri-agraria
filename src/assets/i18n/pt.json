@@ -48,7 +48,13 @@
       "CONTINUAR":"Continuar compra",
       "SALIR":"Sair",
       "PAGAR": "Pagar"
-      }
+      },
+      "THANKYOU":{
+        "GRACIAS":"Obrigado por sua compra!",
+        "AGRADECEMOS":"Agradecemos por escolher nossa loja online. Temos certeza de que você irá desfrutar da sua compra.",
+        "ENVIADO" : "Um email de confirmação foi enviado para o endereço fornecido. Se você tiver alguma pergunta ou problema, não hesite em entrar em contato conosco.",
+        "DENUEVO" :"Obrigado novamente por escolher nossa loja!"
+        }
     
     
     

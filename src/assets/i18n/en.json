@@ -50,5 +50,11 @@
         "CONTINUAR":"Continue Shopping",
         "SALIR": "Exit",
         "PAGAR": "Pay"
-        }
+        },
+        "THANKYOU": {
+            "GRACIAS": "Thank you for your purchase!",
+            "AGRADECEMOS": "We appreciate you choosing our online store. We're sure you'll enjoy your purchase.",
+            "ENVIADO": "A confirmation email has been sent to the address provided. If you have any questions or issues, please don't hesitate to contact us.",
+            "DENUEVO": "Thank you again for choosing our store!"
+            }
     }
