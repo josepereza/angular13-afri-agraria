@@ -44,6 +44,7 @@ export class FormularioComponent implements OnInit {
     email:'',
     direccion:'',
     ciudad:'',
+    cp:'',
     pais:''
   }
 clienteForm=this.fb.group({
@@ -52,6 +53,7 @@ clienteForm=this.fb.group({
   email:[''],
   direccion:[''],
   ciudad:[''],
+  cp:[''],
   pais:['Suiza'],
 
   apellido_fact:[''],
@@ -59,6 +61,8 @@ clienteForm=this.fb.group({
   email_fact:[''],
   direccion_fact:[''],
   ciudad_fact:[''],
+  cp_fact:[''],
+
   pais_fact:['Suiza']
 })
   
@@ -77,12 +81,15 @@ if (this.clienteForm.value.direccion_fact){
   this.envio.nombre =this.clienteForm.value.nombre_fact;
   this.envio.email=this.clienteForm.value.email_fact
   this.envio.ciudad=this.clienteForm.value.ciudad_fact;
+  this.envio.cp=this.clienteForm.value.cp_fact;
   this.envio.pais=this.clienteForm.value.pais_fact
 }else {
   this.envio.apellido=this.clienteForm.value.apellido
   this.envio.nombre =this.clienteForm.value.nombre;
   this.envio.email=this.clienteForm.value.email
   this.envio.ciudad=this.clienteForm.value.ciudad;
+  this.envio.cp=this.clienteForm.value.cp;
+
   this.envio.pais=this.clienteForm.value.pais
 }
  if (ue.includes(this.envio.pais)){

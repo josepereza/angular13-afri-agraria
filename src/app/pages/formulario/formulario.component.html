@@ -3,14 +3,14 @@
 
   <div class="row">
     <div class="col-md-6 mt-5">
-      <h2>Envio</h2>
+      <h2>Shipment/Envio/Sendung</h2>
       <div class="mb-3">
         <form [formGroup]="clienteForm"  (ngSubmit)="onSubmit()">
           <div class="row">
             <div class="col">
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
-                  >Apellido</label
+                  >Familienname/Apellido</label
                 >
                 <input formControlName="apellido"
                   type="text"
@@ -23,7 +23,7 @@
             <div class="col">
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
-                  >Nombre</label
+                  >Name</label
                 >
                 <input
                 formControlName="nombre"
@@ -40,6 +40,7 @@
               >Email address</label
             >
             <input
+            formControlName="email"
               type="email"
               class="form-control"
               id="exampleFormControlInput1"
@@ -47,7 +48,7 @@
             />
           </div>
           <div class="mb-3">
-            <label for="direccion" class="form-label">Direccion</label>
+            <label for="direccion" class="form-label">Address/Direccion</label>
             <input
             formControlName="direccion"
               type="text"
@@ -57,7 +58,7 @@
             />
           </div>
           <div class="mb-3">
-            <label for="cidudad" class="form-label">Ciudad</label>
+            <label for="cidudad" class="form-label">Stadt/Ciudad</label>
             <input
             formControlName="ciudad"
               type="text"
@@ -66,8 +67,18 @@
               placeholder="Madrid"
             />
           </div>
+          <div class="mb-3">
+            <label for="cidudad" class="form-label">Postal Code</label>
+            <input
+            formControlName="cp"
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="30555"
+            />
+          </div>
           <div class="row mb-3">
-            <label for="Pais" class="form-label">Pais</label>
+            <label for="Pais" class="form-label">Country/Pais/Land</label>
 
             <div class="col">
               <select [required]="true"
@@ -97,10 +108,10 @@
                 aria-expanded="false"
                 aria-controls="flush-collapseOne"
               >
-                <h2>Facturacion</h2>
+                <h2>Billing/Abrechnung/Facturacion</h2>
 
                 <span class="fw-lighter ms-3"
-                  >Dejarlo en blanco si es la misma direccion que el envio
+                  >Leave it blank if it is the same address as the delivery
                 </span>
               </button>
             </h2>
@@ -116,7 +127,7 @@
                     <div class="col">
                       <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label"
-                          >Apellido</label
+                          >Familienname</label
                         >
                         <input
                         formControlName="apellido_fact"
@@ -130,7 +141,7 @@
                     <div class="col">
                       <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label"
-                          >Nombre</label
+                          >Name</label
                         >
                         <input
                         formControlName="nombre_fact"
@@ -147,6 +158,7 @@
                       >Email address</label
                     >
                     <input
+                    formControlName="email_fact"
                       type="email"
                       class="form-control"
                       id="exampleFormControlInput1"
@@ -154,7 +166,7 @@
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="direccion" class="form-label">Direccion</label>
+                    <label for="direccion" class="form-label">Address</label>
                     <input
                     formControlName="direccion_fact"
                       type="text"
@@ -164,7 +176,7 @@
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="cidudad" class="form-label">Ciudad</label>
+                    <label for="cidudad" class="form-label">Stadt</label>
                     <input
                     formControlName="ciudad_fact"
                       type="text"
@@ -173,8 +185,18 @@
                       placeholder="Madrid"
                     />
                   </div>
+                  <div class="mb-3">
+                    <label for="cidudad" class="form-label">Postal Code</label>
+                    <input
+                    formControlName="cp_fact"
+                      type="text"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="30555"
+                    />
+                  </div>
                   <div class="row mb-3">
-                    <label for="Pais" class="form-label">Pais</label>
+                    <label for="Pais" class="form-label">Country/Land/Pais</label>
 
                     <div class="col">
                       <select
@@ -195,18 +217,20 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-primary" type="submit">Aceptar</button>
+        <button class="btn btn-primary" type="submit">Send</button>
       </form>
       </div>
     </div>
-    <div class="col-md-6 mt-5">pago
+    <div class="col-md-6 mt-5">Pay / Zahlen
       <div class="card" style="width: 18rem; color: black;">
         <div class="card-body">
-          <h5 class="card-title">Datos de envio</h5>
-          <p class="card-text">Apellidos :{{envio.apellido}}</p>
-          <p class="card-text">Nombre :{{envio.nombre}}</p>
+          <h5 class="card-title">Shipping information</h5>
+          <p class="card-text">Familiennam :{{envio.apellido}}</p>
+          <p class="card-text">Name :{{envio.nombre}}</p>
           <p class="card-text">Email :{{envio.email}}</p>
-          <p class="card-text">Ciudad :{{envio.ciudad}}</p>
+          <p class="card-text">Stadt :{{envio.ciudad}}</p>
+          <p class="card-text">CP :{{envio.cp}}</p>
+
           <p class="card-text">Pais :{{envio.pais}}</p>
 
          
@@ -214,8 +238,8 @@
       </div>
       <div class="card" style="width: 18rem; color: black;"> 
         <h5>Item : {{cartService.getTotalPrice()}}</h5>
-         <h5>Portes : {{portes}}</h5>
-        <h5>Total a pagar : {{cartService.totalPagoCompra}}</h5>
+         <h5>shipment : {{portes}}</h5>
+        <h5>Total to pay : {{cartService.totalPagoCompra}}</h5>
       </div>
 
       <h2>Collection Payment Intent</h2>
