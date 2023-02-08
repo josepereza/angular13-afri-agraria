@@ -5,14 +5,15 @@
     <div class="col-md-6 mt-5">
       <h2>Shipment/Envio/Sendung</h2>
       <div class="mb-3">
-        <form [formGroup]="clienteForm"  (ngSubmit)="onSubmit()">
+        <form [formGroup]="clienteForm" (ngSubmit)="onSubmit()">
           <div class="row">
             <div class="col">
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
                   >Familienname/Apellido</label
                 >
-                <input formControlName="apellido"
+                <input
+                  formControlName="apellido"
                   type="text"
                   class="form-control"
                   id="exampleFormControlInput1"
@@ -26,7 +27,7 @@
                   >Name</label
                 >
                 <input
-                formControlName="nombre"
+                  formControlName="nombre"
                   type="email"
                   class="form-control"
                   id="exampleFormControlInput1"
@@ -40,7 +41,7 @@
               >Email address</label
             >
             <input
-            formControlName="email"
+              formControlName="email"
               type="email"
               class="form-control"
               id="exampleFormControlInput1"
@@ -50,7 +51,7 @@
           <div class="mb-3">
             <label for="direccion" class="form-label">Address/Direccion</label>
             <input
-            formControlName="direccion"
+              formControlName="direccion"
               type="text"
               class="form-control"
               id="direccion"
@@ -60,7 +61,7 @@
           <div class="mb-3">
             <label for="cidudad" class="form-label">Stadt/Ciudad</label>
             <input
-            formControlName="ciudad"
+              formControlName="ciudad"
               type="text"
               class="form-control"
               id="exampleFormControlInput1"
@@ -70,7 +71,7 @@
           <div class="mb-3">
             <label for="cidudad" class="form-label">Postal Code</label>
             <input
-            formControlName="cp"
+              formControlName="cp"
               type="text"
               class="form-control"
               id="exampleFormControlInput1"
@@ -81,186 +82,187 @@
             <label for="Pais" class="form-label">Country/Pais/Land</label>
 
             <div class="col">
-              <select [required]="true"
-            
-              formControlName="pais"
+              <select
+                [required]="true"
+                formControlName="pais"
                 id="pais"
                 class="form-select"
                 aria-label="Default select example"
               >
-                <option value="Suiza"  >Suiza</option>
+                <option value="Suiza">Suiza</option>
                 <option value="Deutschland">Deutschland</option>
                 <option value="England">England</option>
                 <option value="Espaǹa">Espaǹa</option>
               </select>
             </div>
           </div>
-      
 
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseOne"
-                aria-expanded="false"
-                aria-controls="flush-collapseOne"
-              >
-                <h2>Billing/Abrechnung/Facturacion</h2>
-
-                <span class="fw-lighter ms-3"
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  <h2>Billing/Abrechnung/Fact</h2>
+                </button>
+                <span class="fw-lighter ms-3 " style="font-size: 0.7em;"
                   >Leave it blank if it is the same address as the delivery
-                </span>
-              </button>
-            </h2>
-            <div
-              id="flush-collapseOne"
-              class="accordion-collapse collapse"
-              aria-labelledby="flush-headingOne"
-              data-bs-parent="#accordionFlushExample"
-            >
-              <div class="accordion-body">
-                <div class="mb-3">
-                  <div class="row">
-                    <div class="col">
-                      <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label"
-                          >Familienname</label
-                        >
-                        <input
-                        formControlName="apellido_fact"
-                          type="email"
-                          class="form-control"
-                          id="exampleFormControlInput1"
-                          placeholder="name@example.com"
-                        />
+                </span><br>
+                <span class="fw-lighter ms-3 " style="font-size: 0.7em;"
+                >Lassen Sie das Feld leer, wenn es sich um dieselbe Adresse wie die Lieferung handelt
+              </span>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col">
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label"
+                            >Familienname</label
+                          >
+                          <input
+                            formControlName="apellido_fact"
+                            type="email"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="name@example.com"
+                          />
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label"
+                            >Name</label
+                          >
+                          <input
+                            formControlName="nombre_fact"
+                            type="email"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="name@example.com"
+                          />
+                        </div>
                       </div>
                     </div>
-                    <div class="col">
-                      <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label"
-                          >Name</label
-                        >
-                        <input
-                        formControlName="nombre_fact"
-                          type="email"
-                          class="form-control"
-                          id="exampleFormControlInput1"
-                          placeholder="name@example.com"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label"
-                      >Email address</label
-                    >
-                    <input
-                    formControlName="email_fact"
-                      type="email"
-                      class="form-control"
-                      id="exampleFormControlInput1"
-                      placeholder="name@example.com"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="direccion" class="form-label">Address</label>
-                    <input
-                    formControlName="direccion_fact"
-                      type="text"
-                      class="form-control"
-                      id="direccion"
-                      placeholder="C/Alexander, 4"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="cidudad" class="form-label">Stadt</label>
-                    <input
-                    formControlName="ciudad_fact"
-                      type="text"
-                      class="form-control"
-                      id="exampleFormControlInput1"
-                      placeholder="Madrid"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="cidudad" class="form-label">Postal Code</label>
-                    <input
-                    formControlName="cp_fact"
-                      type="text"
-                      class="form-control"
-                      id="exampleFormControlInput1"
-                      placeholder="30555"
-                    />
-                  </div>
-                  <div class="row mb-3">
-                    <label for="Pais" class="form-label">Country/Land/Pais</label>
-
-                    <div class="col">
-                      <select
-                      formControlName="pais_fact"
-                        id="pais"
-                        class="form-select"
-                        aria-label="Default select example"
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label"
+                        >Email address</label
                       >
-                        <option selected>Pais</option>
-                        <option value="Deutschland">Deutschland</option>
-                        <option value="England">England</option>
-                        <option value="Espaǹa">Espaǹa</option>
-                      </select>
+                      <input
+                        formControlName="email_fact"
+                        type="email"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="name@example.com"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="direccion" class="form-label">Address</label>
+                      <input
+                        formControlName="direccion_fact"
+                        type="text"
+                        class="form-control"
+                        id="direccion"
+                        placeholder="C/Alexander, 4"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="cidudad" class="form-label">Stadt</label>
+                      <input
+                        formControlName="ciudad_fact"
+                        type="text"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="Madrid"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="cidudad" class="form-label"
+                        >Postal Code</label
+                      >
+                      <input
+                        formControlName="cp_fact"
+                        type="text"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="30555"
+                      />
+                    </div>
+                    <div class="row mb-3">
+                      <label for="Pais" class="form-label"
+                        >Country/Land/Pais</label
+                      >
+
+                      <div class="col">
+                        <select
+                          formControlName="pais_fact"
+                          id="pais"
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Pais</option>
+                          <option value="Deutschland">Deutschland</option>
+                          <option value="England">England</option>
+                          <option value="Espaǹa">Espaǹa</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <button class="btn btn-primary" type="submit">Send</button>
-      </form>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
       </div>
     </div>
-    <div class="col-md-6 mt-5">Pay / Zahlen
-      <div class="card" style="width: 18rem; color: black;">
+    <div class="col-md-6 mt-5">
+      Pay / Zahlen
+      <div class="card" style="width: 18rem; color: black">
         <div class="card-body">
           <h5 class="card-title">Shipping information</h5>
-          <p class="card-text">Familiennam :{{envio.apellido}}</p>
-          <p class="card-text">Name :{{envio.nombre}}</p>
-          <p class="card-text">Email :{{envio.email}}</p>
-          <p class="card-text">Stadt :{{envio.ciudad}}</p>
-          <p class="card-text">CP :{{envio.cp}}</p>
+          <p class="card-text">Familiennam :{{ envio.apellido }}</p>
+          <p class="card-text">Name :{{ envio.nombre }}</p>
+          <p class="card-text">Email :{{ envio.email }}</p>
+          <p class="card-text">Stadt :{{ envio.ciudad }}</p>
+          <p class="card-text">CP :{{ envio.cp }}</p>
 
-          <p class="card-text">Pais :{{envio.pais}}</p>
-
-         
+          <p class="card-text">Pais :{{ envio.pais }}</p>
         </div>
       </div>
-      <div class="card" style="width: 18rem; color: black;"> 
-        <h5>Item : {{cartService.getTotalPrice()}}</h5>
-         <h5>shipment : {{portes}}</h5>
-        <h5>Total to pay : {{cartService.totalPagoCompra}}</h5>
+      <div class="card" style="width: 18rem; color: black">
+        <h5>Item : {{ cartService.getTotalPrice() }}</h5>
+        <h5>shipment : {{ portes }}</h5>
+        <h5>Total to pay : {{ cartService.totalPagoCompra }}</h5>
       </div>
 
       <h2>Collection Payment Intent</h2>
       <div class="container">
-      <div class="card">
-        <ngx-stripe-card
+        <div class="card">
+          <ngx-stripe-card
             [options]="cardOptions"
             [elementsOptions]="elementsOptions"
           ></ngx-stripe-card>
           <button class="btn btn-primary" type="submit" (click)="pay()">
             PAY
           </button>
-      </div>
-          
-          
         </div>
-        
-    
-
-
-
+      </div>
     </div>
   </div>
 </div>
