@@ -21,7 +21,7 @@
                             <td><img style="width: 120px;" src="{{item.imagen}}" alt=""></td>
                             <th style="width: 12%;">{{item.precio}}</th>
                             <td style="width: 5%;">{{item.cantidad}}</td>
-                            <td style="width: 5%;">{{item.cantidad*item.precio}}</td>
+                            <td style="width: 5%;">{{item.cantidad*item.precio | currency: 'EUR'}}</td>
                             <td>
                                 <button (click)="removeItem(item)" class="btn btn-danger"><i class="bi-trash"></i></button>
                             </td>
