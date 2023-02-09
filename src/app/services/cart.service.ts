@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
 import {Products} from '../../assets/productos/products';
@@ -13,7 +14,7 @@ export class CartService {
   public totalPago=0;
   totalItem$=new Subject<number>();
   totalItem=0;
-  constructor() { }
+  constructor(private http:HttpClient ) { }
   get totalPagoCompra(){
     return this.totalPago
   }
@@ -75,5 +76,12 @@ this.totalItem$.next(this.totalItem)
     this.productList.next(this.cartItemList);
     this.totalItem=0;
     this.totalItem$.next(this.totalItem)
+  }
+  ventaRealizada(data1:any,data2:any){
+    let datos={
+      data1,data2
+    }
+    return this.http.post('http://localhost:3000',datos)
+
   }
 }

@@ -23,15 +23,15 @@
             </div>
             <div class="col">
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
+                <label for="controlNombre" class="form-label"
                   >Name</label
                 >
                 <input
                   formControlName="nombre"
-                  type="email"
+                  type="text"
                   class="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="name@example.com"
+                  id="controlNombre"
+                  placeholder="name"
                 />
               </div>
             </div>
@@ -145,16 +145,16 @@
                       <div class="col">
                         <div class="mb-3">
                           <label
-                            for="exampleFormControlInput1"
+                            for="controNombre2"
                             class="form-label"
                             >Name</label
                           >
                           <input
                             formControlName="nombre_fact"
-                            type="email"
+                            type="text"
                             class="form-control"
-                            id="exampleFormControlInput1"
-                            placeholder="name@example.com"
+                            id="controlNombre2"
+                            placeholder="name"
                           />
                         </div>
                       </div>
@@ -254,6 +254,8 @@
       <h2>Collection Payment Intent</h2>
       <div class="container">
         <div class="card">
+          <input  class="form-control" placeholder="Name" id="name" type="text" [formControl]="nameStripe">
+
           <ngx-stripe-card
             [options]="cardOptions"
             [elementsOptions]="elementsOptions"
