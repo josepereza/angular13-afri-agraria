@@ -96,6 +96,19 @@
               </select>
             </div>
           </div>
+ 
+          <div
+          *ngIf="
+            clienteForm.controls['nombre'].invalid &&
+            (clienteForm.controls['nombre'].dirty || clienteForm.controls['nombre'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="clienteForm.controls['nombre']?.errors?.['required']">
+            Name is required.
+          </div>
+        </div>
+
 
           <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
@@ -227,7 +240,9 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-primary" type="submit">Send</button>
+         
+
+          <button  [disabled]="!clienteForm.valid"  class="btn btn-primary" type="submit">Send</button>
         </form>
       </div>
     </div>
@@ -254,7 +269,7 @@
       <h2>Zahlungskarte/Payment Card</h2>
       <div class="container">
         <div class="card">
-          <input  class="form-control namePayment" placeholder="Name ,Ex:John Carpenter" id="name" type="text" [formControl]="nameStripe">
+          <input   class="form-control namePayment" placeholder="Name ,Ex:John Carpenter" id="name" type="text" [formControl]="nameStripe">
 
           <ngx-stripe-card
             [options]="cardOptions"

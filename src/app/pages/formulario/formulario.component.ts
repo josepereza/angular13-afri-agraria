@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, UntypedFormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { CartService } from 'src/app/services/cart.service';
 import { StripeService, StripeCardComponent } from 'ngx-stripe';
 import {
@@ -10,7 +10,7 @@ import {
 import { Observable, switchMap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-const ue = ['Francia', 'Spain', 'Deutschland'];
+const ue = ['Francia', 'Spain', 'Deutschland', 'Portugal'];
 const nonUe = ['Suiza', 'England'];
 
 @Component({
@@ -38,7 +38,7 @@ export class FormularioComponent implements OnInit {
   };
   portes = 0;
   elementsOptions: StripeElementsOptions = {
-    locale: 'es',
+    locale: 'en',
   };
   envio = {
     apellido: '',
@@ -50,15 +50,15 @@ export class FormularioComponent implements OnInit {
     pais: '',
   };
 
-  nameStripe = new FormControl('');
+  nameStripe = new FormControl('',Validators.required);
   clienteForm = this.fb.group({
-    apellido: [''],
-    nombre: [''],
+    apellido: ['',Validators.required],
+    nombre: ['',Validators.required],
     email: [''],
-    direccion: [''],
-    ciudad: [''],
-    cp: [''],
-    pais: ['Suiza'],
+    direccion: ['',Validators.required],
+    ciudad: ['',Validators.required],
+    cp: ['',Validators.required],
+    pais: ['Suiza',Validators.required],
 
     apellido_fact: [''],
     nombre_fact: [''],

@@ -1,6 +1,6 @@
 
 
-::placeholder {
-    color: red;
-    opacity: 1; /* Firefox */
+.namePayment::placeholder {
+    color: red !important;
+    opacity: 0.5; /* Firefox */
   }
