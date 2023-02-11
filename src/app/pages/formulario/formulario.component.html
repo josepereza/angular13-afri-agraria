@@ -251,10 +251,10 @@
         <h5>Total to pay : {{ cartService.totalPagoCompra  | currency: 'EUR'}}</h5>
       </div>
 
-      <h2>Collection Payment Intent</h2>
+      <h2>Zahlungskarte/Payment Card</h2>
       <div class="container">
         <div class="card">
-          <input  class="form-control" placeholder="Name" id="name" type="text" [formControl]="nameStripe">
+          <input  class="form-control namePayment" placeholder="Name ,Ex:John Carpenter" id="name" type="text" [formControl]="nameStripe">
 
           <ngx-stripe-card
             [options]="cardOptions"

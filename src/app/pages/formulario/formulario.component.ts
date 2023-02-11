@@ -19,8 +19,10 @@ const nonUe = ['Suiza', 'England'];
   styleUrls: ['./formulario.component.css'],
 })
 export class FormularioComponent implements OnInit {
+
   @ViewChild(StripeCardComponent) card!: StripeCardComponent;
   cardOptions: StripeCardElementOptions = {
+    hidePostalCode:true,
     style: {
       base: {
         iconColor: 'red',
@@ -107,6 +109,8 @@ export class FormularioComponent implements OnInit {
     }
   }
 
+  
+
   pay(): void {
     this.createPaymentIntent(this.cartService.totalPagoCompra)
       .pipe(
@@ -148,4 +152,5 @@ export class FormularioComponent implements OnInit {
       { amount }
     );
   }
+
 }
