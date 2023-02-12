@@ -54,7 +54,7 @@ export class FormularioComponent implements OnInit {
   clienteForm = this.fb.group({
     apellido: ['',Validators.required],
     nombre: ['',Validators.required],
-    email: [''],
+    email: ['', Validators.email],
     direccion: ['',Validators.required],
     ciudad: ['',Validators.required],
     cp: ['',Validators.required],
