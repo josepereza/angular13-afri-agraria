@@ -36,6 +36,18 @@
               </div>
             </div>
           </div>
+          <div
+          *ngIf="
+           ( clienteForm.controls['apellido'].invalid &&
+            (clienteForm.controls['apellido'].dirty || clienteForm.controls['apellido'].touched))||
+            clienteForm.controls['nombre'].invalid &&
+            (clienteForm.controls['nombre'].dirty || clienteForm.controls['nombre'].touched)"
+          
+          class="alert alert-danger"    >
+          <div *ngIf="clienteForm.controls['apellido']?.errors?.['required']||clienteForm.controls['nombre']?.errors?.['required']">
+            Last name or Name  is required.
+          </div>
+          </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"
               >Email address</label
@@ -48,6 +60,17 @@
               placeholder="name@example.com"
             />
           </div>
+          <div
+          *ngIf="
+            clienteForm.controls['email'].invalid &&
+            (clienteForm.controls['email'].dirty || clienteForm.controls['email'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="clienteForm.controls['email']?.errors?.['required']">
+            email is required.
+          </div>
+        </div>
           <div class="mb-3">
             <label for="direccion" class="form-label">Address/Direccion</label>
             <input
@@ -58,6 +81,17 @@
               placeholder="C/Alexander, 4"
             />
           </div>
+          <div
+          *ngIf="
+            clienteForm.controls['direccion'].invalid &&
+            (clienteForm.controls['direccion'].dirty || clienteForm.controls['direccion'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="clienteForm.controls['direccion']?.errors?.['required']">
+            Address is required.
+          </div>
+        </div>
           <div class="mb-3">
             <label for="cidudad" class="form-label">Stadt/Ciudad</label>
             <input
@@ -68,6 +102,17 @@
               placeholder="Madrid"
             />
           </div>
+          <div
+          *ngIf="
+            clienteForm.controls['ciudad'].invalid &&
+            (clienteForm.controls['ciudad'].dirty || clienteForm.controls['ciudad'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="clienteForm.controls['ciudad']?.errors?.['required']">
+            Stadt is required.
+          </div>
+        </div>
           <div class="mb-3">
             <label for="cidudad" class="form-label">Postal Code</label>
             <input
@@ -78,6 +123,17 @@
               placeholder="30555"
             />
           </div>
+          <div
+          *ngIf="
+            clienteForm.controls['cp'].invalid &&
+            (clienteForm.controls['cp'].dirty || clienteForm.controls['cp'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="clienteForm.controls['cp']?.errors?.['required']">
+            Cp is required.
+          </div>
+        </div>
           <div class="row mb-3">
             <label for="Pais" class="form-label">Country/Pais/Land</label>
 
@@ -123,10 +179,10 @@
                 >
                   <h2>Billing/Abrechnung/Fact</h2>
                 </button>
-                <span class="fw-lighter ms-3 " style="font-size: 0.7em;"
+                <span class="fw-lighter ms-3 " style="font-size: 0.6em;"
                   >Leave it blank if it is the same address as the delivery
                 </span><br>
-                <span class="fw-lighter ms-3 " style="font-size: 0.7em;"
+                <span class="fw-lighter ms-3 " style="font-size: 0.6em;"
                 >Lassen Sie das Feld leer, wenn es sich um dieselbe Adresse wie die Lieferung handelt
               </span>
               </h2>
