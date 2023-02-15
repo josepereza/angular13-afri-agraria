@@ -8,3 +8,7 @@
     background-attachment: fixed;
    font-family: 'Quintessential', cursive;;
 }
+.boton{
+    padding:10px 30px;
+    font-size: 1.5em;
+}
