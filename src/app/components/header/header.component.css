@@ -46,6 +46,12 @@ p{
 .jumbotron p {
     font-family: 'Orelega One', cursive;
 }
+.boton{
+    margin-top: 40px;
+    background-color: transparent;
+    padding:10px 40px;
+    font-size: 1.5em;
+}
 @media screen and (max-width: 600px) {
     .micontainer {
         height: 100vh;
