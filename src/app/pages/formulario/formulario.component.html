@@ -65,11 +65,10 @@
             clienteForm.controls['email'].invalid &&
             (clienteForm.controls['email'].dirty || clienteForm.controls['email'].touched)
           "
-          class="alert alert-danger"
-        >
-          <div *ngIf="clienteForm.controls['email']?.errors?.['required']">
-            email is required.
-          </div>
+          class="alert alert-danger">
+          
+            email is false.
+          
         </div>
           <div class="mb-3">
             <label for="direccion" class="form-label">Address/Direccion</label>
@@ -331,7 +330,7 @@
             [options]="cardOptions"
             [elementsOptions]="elementsOptions"
           ></ngx-stripe-card>
-          <button class="btn btn-primary" type="submit" (click)="pay()">
+          <button [disabled]="!nameStripe.valid"  class="btn btn-primary" type="submit" (click)="pay()">
             PAY
           </button>
         </div>
