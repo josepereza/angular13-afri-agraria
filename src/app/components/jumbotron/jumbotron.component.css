@@ -1,3 +1,8 @@
 .jumbotron{
-    font-family: 'Orelega One', cursive;
+    font-family: 'Oswald', sans-serif;
+}
+a{
+    border-style: solid;
+    border-color: black !important;
+    border-width: 2px !important;
 }

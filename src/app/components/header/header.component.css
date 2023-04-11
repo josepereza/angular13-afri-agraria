@@ -35,13 +35,19 @@
 
 }
 h1 {
-    font-family: 'Quintessential', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+
 }
 h2 {
-    font-family: 'Sedgwick Ave', cursive;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
 }
 p{
-    font-family: 'Quintessential', cursive;
+    font-family: 'Oswald', sans-serif;
+
+    font-weight: 200;
+
     letter-spacing:5px;
 }
 .jumbotron p {
@@ -52,6 +58,7 @@ p{
     background-color: black;
     padding:10px 40px;
     font-size: 1.5em;
+    border-color: white;
 }
 @media screen and (max-width: 600px) {
     .micontainer {

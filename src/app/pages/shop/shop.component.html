@@ -3,13 +3,13 @@
     <div @fadeIn class="col-md-6 text-center">
       <img src="{{item.imagen}}" width="80%" alt="" />
       <div class="">
-        <a class="btn btn-primary w-100 mb-3" routerLink="/{{item.link}}"
+        <a class="btn boton w-100 mb-3 mt-3" routerLink="/{{item.link}}"
           >{{"SHOP.DETA" | translate}}</a
         >
       </div>
     </div>
     <div @fadeIn class="col-md-6 text-white">
-      <div class="card border-primary mx-auto mb-3 p-2">
+      <div class="card border-white mx-auto mb-3 p-2">
         <span class="display-5">{{item.precio}} € &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Qty:{{
            item.cantidad 
           }}
@@ -19,12 +19,12 @@
         <div class="row g-3">
          
           <div class="">
-            <button class="btn btn-primary" (click)="addtocart(item)" (click)="item.cantidad=item.cantidad+1">
+            <button class="btn boton mt-2" (click)="addtocart(item)" (click)="item.cantidad=item.cantidad+1">
               {{"SHOP.AGRE" | translate}}
             </button>
           </div>
         </div>
-        <div class="card-body text-primary">
+        <div class="card-body text-white">
           <h5 class="card-title">{{item.nombre}}</h5>
           <p class="card-text">
           {{item.descripcion}}

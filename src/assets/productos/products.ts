@@ -13,7 +13,7 @@ export const Products=[
     nombre:'Anacardos',
     precio:3.50,
     descripcion: 'Energie: 2445 kj/589 kcal; Fett/Grasa:43,4g; davos ges. Fettsäuren:8g ; Kohlehydrate: 25,1g; davon Zucker:6,3g ; Eiweiss:21,9g ; Salz: 0,003g',
-    imagen:'./assets/productos/anacardos.jpg',
+    imagen:'./assets/productos/anacardos-2.png',
     link:'anacardos-desc',
     cantidad:0
 }

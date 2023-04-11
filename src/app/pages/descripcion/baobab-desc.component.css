@@ -1,7 +1,7 @@
 .pelo {
     height: 100vh;
 
-    background-image: url('../../../assets/images/pelo.jpg');
+    background-image: url('../../../assets/images/chica1.jpeg');
     background-position:center center;
     background-size: cover;
     background-attachment: fixed;
@@ -11,7 +11,7 @@
 .edad {
     height: 100vh;
 
-    background-image: url('../../../assets/images/edad.jpg');
+    background-image: url('../../../assets/images/chica2.jpeg');
     background-position:left;
     background-size: cover;
     background-attachment: fixed;
