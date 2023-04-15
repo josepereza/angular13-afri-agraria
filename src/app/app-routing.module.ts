@@ -48,7 +48,7 @@ const routes: Routes = [
   {
     path:'profile', component:ProfileComponent,
     children: [
-      { path: '',redirectTo:'crearprofile', pathMatch:'full'},
+      { path: '',redirectTo:'homeprofile', pathMatch:'full'},
       {
         path:'homeprofile', component:HomeprofileComponent      
       },

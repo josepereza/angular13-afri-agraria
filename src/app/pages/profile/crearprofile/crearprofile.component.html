@@ -1,4 +1,309 @@
-<div class="container">
-    <p>crearprofile works!</p>
+<div class="container text-white">
+    <br /><br />
+  
+    <div class="row">
+      <div class="col-md-6 mt-5">
+        <h2>Shipment/Envio/Sendung</h2>
+        <div class="mb-3">
+          <form [formGroup]="clienteForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Familienname/Apellido</label
+                  >
+                  <input
+                    formControlName="apellido"
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="apellido"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="controlNombre" class="form-label"
+                    >Name</label
+                  >
+                  <input
+                    formControlName="nombre"
+                    type="text"
+                    class="form-control"
+                    id="controlNombre"
+                    placeholder="name"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+            *ngIf="
+             ( clienteForm.controls['apellido'].invalid &&
+              (clienteForm.controls['apellido'].dirty || clienteForm.controls['apellido'].touched))||
+              clienteForm.controls['nombre'].invalid &&
+              (clienteForm.controls['nombre'].dirty || clienteForm.controls['nombre'].touched)"
+            
+            class="alert alert-danger"    >
+            <div *ngIf="clienteForm.controls['apellido']?.errors?.['required']||clienteForm.controls['nombre']?.errors?.['required']">
+              Last name or Name  is required.
+            </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email address</label
+              >
+              <input
+                formControlName="email"
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div
+            *ngIf="
+              clienteForm.controls['email'].invalid &&
+              (clienteForm.controls['email'].dirty || clienteForm.controls['email'].touched)
+            "
+            class="alert alert-danger">
+            
+              email is false.
+            
+          </div>
+            <div class="mb-3">
+              <label for="direccion" class="form-label">Address/Direccion</label>
+              <input
+                formControlName="direccion"
+                type="text"
+                class="form-control"
+                id="direccion"
+                placeholder="C/Alexander, 4"
+              />
+            </div>
+            <div
+            *ngIf="
+              clienteForm.controls['direccion'].invalid &&
+              (clienteForm.controls['direccion'].dirty || clienteForm.controls['direccion'].touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="clienteForm.controls['direccion']?.errors?.['required']">
+              Address is required.
+            </div>
+          </div>
+            <div class="mb-3">
+              <label for="cidudad" class="form-label">Stadt/Ciudad</label>
+              <input
+                formControlName="ciudad"
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Madrid"
+              />
+            </div>
+            <div
+            *ngIf="
+              clienteForm.controls['ciudad'].invalid &&
+              (clienteForm.controls['ciudad'].dirty || clienteForm.controls['ciudad'].touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="clienteForm.controls['ciudad']?.errors?.['required']">
+              Stadt is required.
+            </div>
+          </div>
+            <div class="mb-3">
+              <label for="cidudad" class="form-label">Postal Code</label>
+              <input
+                formControlName="cp"
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="30555"
+              />
+            </div>
+            <div
+            *ngIf="
+              clienteForm.controls['cp'].invalid &&
+              (clienteForm.controls['cp'].dirty || clienteForm.controls['cp'].touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="clienteForm.controls['cp']?.errors?.['required']">
+              Cp is required.
+            </div>
+          </div>
+            <div class="row mb-3">
+              <label for="Pais" class="form-label">Country/Pais/Land</label>
+  
+              <div class="col">
+                <select
+                  [required]="true"
+                  formControlName="pais"
+                  id="pais"
+                  class="form-select"
+                  aria-label="Default select example"
+                >
+                  <option value="Suiza">Suiza</option>
+                  <option value="Deutschland">Deutschland</option>
+                  <option value="England">England</option>
+                  <option value="Espaǹa">Espaǹa</option>
+                </select>
+              </div>
+            </div>
+   
+            <div
+            *ngIf="
+              clienteForm.controls['nombre'].invalid &&
+              (clienteForm.controls['nombre'].dirty || clienteForm.controls['nombre'].touched)
+            "
+            class="alert alert-danger"
+          >
+            <div *ngIf="clienteForm.controls['nombre']?.errors?.['required']">
+              Name is required.
+            </div>
+          </div>
+  
+  
+           
+  
+            <button  [disabled]="!clienteForm.valid"  class="btn btn-primary" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
 
-</div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  <h2>Billing/Abrechnung/Fact</h2>
+                </button>
+                <span class="fw-lighter ms-3 " style="font-size: 0.6em;"
+                  >Leave it blank if it is the same address as the delivery
+                </span><br>
+                <span class="fw-lighter ms-3 " style="font-size: 0.6em;"
+                >Lassen Sie das Feld leer, wenn es sich um dieselbe Adresse wie die Lieferung handelt
+              </span>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col">
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label"
+                            >Familienname</label
+                          >
+                          <input
+                            formControlName="apellido_fact"
+                            type="text"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="Müller"
+                          />
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="mb-3">
+                          <label
+                            for="controNombre2"
+                            class="form-label"
+                            >Name</label
+                          >
+                          <input
+                            formControlName="nombre_fact"
+                            type="text"
+                            class="form-control"
+                            id="controlNombre2"
+                            placeholder="name"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label"
+                        >Email address</label
+                      >
+                      <input
+                        formControlName="email_fact"
+                        type="email"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="name@example.com"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="direccion" class="form-label">Address</label>
+                      <input
+                        formControlName="direccion_fact"
+                        type="text"
+                        class="form-control"
+                        id="direccion"
+                        placeholder="C/Alexander, 4"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="cidudad" class="form-label">Stadt</label>
+                      <input
+                        formControlName="ciudad_fact"
+                        type="text"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="Madrid"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="cidudad" class="form-label"
+                        >Postal Code</label
+                      >
+                      <input
+                        formControlName="cp_fact"
+                        type="text"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="30555"
+                      />
+                    </div>
+                    <div class="row mb-3">
+                      <label for="Pais" class="form-label"
+                        >Country/Land/Pais</label
+                      >
+
+                      <div class="col">
+                        <select
+                          formControlName="pais_fact"
+                          id="pais"
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Pais</option>
+                          <option value="Deutschland">Deutschland</option>
+                          <option value="England">England</option>
+                          <option value="Espaǹa">Espaǹa</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
