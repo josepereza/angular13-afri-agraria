@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ProfileService } from 'src/app/services/profile.service';
 
 @Component({
   selector: 'app-crearprofile',
@@ -28,11 +29,15 @@ export class CrearprofileComponent implements OnInit {
   });
 
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder, private profileSevice:ProfileService) { }
 
   ngOnInit(): void {
   }
-onSubmit(){
-  
+crearProfile(){
+  this.profileSevice.createClienteProfile(this.clienteForm.value).subscribe(data=>{
+    console.log(data)
+  })
+
+
 }
 }

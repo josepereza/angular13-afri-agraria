@@ -5,6 +5,6 @@ export interface Product {
     precio:number,
     imagen:string,
     link:string,
-    cantidad:number
+    cantidad?:number
 
 }

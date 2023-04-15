@@ -20,6 +20,9 @@ constructor(public cartService:CartService, private productsService:ProductsServ
 
   ngOnInit(): void {
    this.products=this.productsService.getAll()
+   this.products.map(prod=>
+    prod.cantidad=0
+   )
    console.log('shop', this.products)
    
   }
