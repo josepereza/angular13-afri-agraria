@@ -19,12 +19,15 @@ products:Product[]=[]
 constructor(public cartService:CartService, private productsService:ProductsService) { }
 
   ngOnInit(): void {
-   this.products=this.productsService.getAll()
-   this.products.map(prod=>
-    prod.cantidad=0
-   )
-   console.log('shop', this.products)
-   
+   this.productsService.getAll().subscribe((productos:any)=>{
+    this.products=productos
+    this.products.map(prod=>
+      prod.cantidad=0
+     )
+     console.log('shop', this.products)
+     
+   })
+  
   }
   addtocart(item: any){
        this.cartService.addtoCart(item);

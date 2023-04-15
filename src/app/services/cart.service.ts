@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
-import { Products } from '../../assets/productos/products';
+//import { Products } from '../../assets/productos/products';
 import { Product } from '../interfaces/product';
 
 @Injectable({
@@ -16,8 +16,10 @@ export class CartService {
   totalItem$ = new Subject<number>();
   totalItem = 0;
   constructor(private http: HttpClient) {
-    Products.map((product: Product) => (product.cantidad = 0));
-    this.products=Products;
+    http.get('http://localhost:3000/productos').subscribe((data:any)=>{
+      this.products=data.map((product: Product) => (product.cantidad = 0));
+    })
+   
     
   }
   get totalPagoCompra() {
@@ -71,7 +73,7 @@ export class CartService {
     this.productList.next(this.cartItemList);
   }
   removeAllCart() {
-    Products.map((a: any, index: any) => {
+    this.products.map((a: any, index: any) => {
       a.cantidad = 0;
     });
     this.cartItemList = [];
