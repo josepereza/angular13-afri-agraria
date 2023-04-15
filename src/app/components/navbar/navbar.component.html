@@ -14,6 +14,9 @@
                 <li class="nav-item">
                     <a  data-toggle="dropdown"   class="nav-link" href="#descubre">Discover</a>
                 </li>
+                <li class="nav-item">
+                    <a  data-toggle="dropdown"   class="nav-link" routerLink="/profile">Profle</a>
+                </li>
                 <li class="nav-item ">
                     <a  data-toggle="dropdown" data-bs-target="#navbarNav" data-bs-toggle="collapse"   class="nav-link" routerLink="/shop">Shop</a>
                 </li>
@@ -21,6 +24,15 @@
             </ul>
            
         </div>
+        <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+            <button (click)="auth.logout({ logoutParams: { returnTo: document.location.origin } })">
+              Log out
+            </button>
+          </ng-container>
+      
+          <ng-template #loggedOut>
+            <button (click)="auth.loginWithRedirect()">Log in</button>
+          </ng-template>
        <label style="display: flex;">        
             <i style="font-size: 20px;color:white" class="bi-globe2"></i>
 

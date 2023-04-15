@@ -25,7 +25,17 @@ import { AnacardosDescComponent } from './pages/descripcion/anacardos-desc.compo
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ThankyouComponent } from './pages/thankyou/thankyou.component';
+
+
 import { CheckoutErrorComponent } from './pages/checkout-error/checkout-error.component';
+
+import { AuthModule } from '@auth0/auth0-angular';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { CrearprofileComponent } from './pages/profile/crearprofile/crearprofile.component';
+import { ModificarprofileComponent } from './pages/profile/modificarprofile/modificarprofile.component';
+import { HomeprofileComponent } from './pages/profile/homeprofile/homeprofile.component';
+
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -47,6 +57,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     AnacardosDescComponent,
     ThankyouComponent,
     CheckoutErrorComponent,
+    ProfileComponent,
+    CrearprofileComponent,
+    ModificarprofileComponent,
+    HomeprofileComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -63,7 +78,15 @@ export function HttpLoaderFactory(http: HttpClient) {
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }
-  })  
+  }) ,
+  AuthModule.forRoot({
+    domain: 'dev-20yrwtuy.eu.auth0.com',
+    clientId: '1dVeJ9RczhJNgIB8WUQ2ij8w6TAzrD17',
+    authorizationParams: {
+      redirect_uri: window.location.origin
+    }
+    
+  }), 
   ],
   providers: [
     {provide: SCROLL_EVENT_TIME, useValue: 500}

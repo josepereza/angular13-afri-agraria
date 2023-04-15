@@ -7,6 +7,10 @@ import { AnacardosDescComponent } from './pages/descripcion/anacardos-desc.compo
 import { BaobabDescComponent } from './pages/descripcion/baobab-desc.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { ProductosComponent } from './pages/productos/productos.component';
+import { CrearprofileComponent } from './pages/profile/crearprofile/crearprofile.component';
+import { HomeprofileComponent } from './pages/profile/homeprofile/homeprofile.component';
+import { ModificarprofileComponent } from './pages/profile/modificarprofile/modificarprofile.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { ThankyouComponent } from './pages/thankyou/thankyou.component';
 
@@ -40,6 +44,17 @@ const routes: Routes = [
   },
   {
     path:'check-error', component:CheckoutErrorComponent
+  },
+  {
+    path:'profile', component:ProfileComponent,
+    children: [
+      { path: '',redirectTo:'crearprofile', pathMatch:'full'},
+      {
+        path:'homeprofile', component:HomeprofileComponent      
+      },
+      { path: 'crearprofile', component: CrearprofileComponent },
+      { path: 'modificarprofile', component:ModificarprofileComponent}
+    ]
   }
 ];
 
