@@ -11,4 +11,9 @@ export class ProfileService {
   createClienteProfile(cliente:any){
 return this.http.post('http://localhost:3000/clientes', cliente)
   }
+
+  getProfile(user:string){
+    return this.http.get(`http://localhost:3000/clientes/${user}`)
+
+  }
 }
