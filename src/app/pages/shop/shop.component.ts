@@ -24,7 +24,7 @@ constructor(public cartService:CartService, private productsService:ProductsServ
     this.products.map(prod=>
       prod.cantidad=0
      )
-     console.log('shop', this.products)
+     console.log('shop',  this.products)
      
    })
   
