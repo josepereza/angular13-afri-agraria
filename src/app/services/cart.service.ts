@@ -84,15 +84,17 @@ export class CartService {
     this.totalItem = 0;
     this.totalItem$.next(this.totalItem);
   }
-  ventaRealizada(data1: any, data2: any) {
+  ventaRealizada(data1: any, data2: any, portes:any) {
    const  producto=data2.map((pro:any)=>{
        return  {productoId:pro.codigo, cantidad:pro.cantidad, totalImporte:pro.cantidad*pro.precio}
     })
-    let order={
+    const order={
       user:data1.email,
-      orderItem:producto
-
+      orderItem:producto,
+      portes:portes
+     
     }
+    
      this.http.post('http://localhost:3000/orders', order).subscribe(data=>{
       console.log('mi data angular', data)
      })

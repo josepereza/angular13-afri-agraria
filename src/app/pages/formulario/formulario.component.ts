@@ -1,5 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  UntypedFormBuilder,
+  Validators,
+} from '@angular/forms';
 import { CartService } from 'src/app/services/cart.service';
 import { StripeService, StripeCardComponent } from 'ngx-stripe';
 import {
@@ -19,10 +24,9 @@ const nonUe = ['Suiza', 'England'];
   styleUrls: ['./formulario.component.css'],
 })
 export class FormularioComponent implements OnInit {
-
   @ViewChild(StripeCardComponent) card!: StripeCardComponent;
   cardOptions: StripeCardElementOptions = {
-    hidePostalCode:true,
+    hidePostalCode: true,
     style: {
       base: {
         iconColor: 'red',
@@ -36,7 +40,7 @@ export class FormularioComponent implements OnInit {
       },
     },
   };
- 
+  portes:number=0;
   elementsOptions: StripeElementsOptions = {
     locale: 'en',
   };
@@ -50,15 +54,15 @@ export class FormularioComponent implements OnInit {
     pais: '',
   };
 
-  nameStripe = new FormControl('',Validators.required);
+  nameStripe = new FormControl('', Validators.required);
   clienteForm = this.fb.group({
-    apellido: ['',Validators.required],
-    nombre: ['',Validators.required],
+    apellido: ['', Validators.required],
+    nombre: ['', Validators.required],
     email: ['', Validators.email],
-    direccion: ['',Validators.required],
-    ciudad: ['',Validators.required],
-    cp: ['',Validators.required],
-    pais: ['Suiza',Validators.required],
+    direccion: ['', Validators.required],
+    ciudad: ['', Validators.required],
+    cp: ['', Validators.required],
+    pais: ['Suiza', Validators.required],
 
     apellido_fact: [''],
     nombre_fact: [''],
@@ -85,7 +89,7 @@ export class FormularioComponent implements OnInit {
     if (this.clienteForm.value.direccion_fact) {
       this.envio.apellido = this.clienteForm.value.apellido_fact;
       this.envio.nombre = this.clienteForm.value.nombre_fact;
-      this.envio.direccion=this.clienteForm.value.direccion_fact;
+      this.envio.direccion = this.clienteForm.value.direccion_fact;
       this.envio.email = this.clienteForm.value.email_fact;
       this.envio.ciudad = this.clienteForm.value.ciudad_fact;
       this.envio.cp = this.clienteForm.value.cp_fact;
@@ -93,7 +97,7 @@ export class FormularioComponent implements OnInit {
     } else {
       this.envio.apellido = this.clienteForm.value.apellido;
       this.envio.nombre = this.clienteForm.value.nombre;
-      this.envio.direccion=this.clienteForm.value.direccion;
+      this.envio.direccion = this.clienteForm.value.direccion;
       this.envio.email = this.clienteForm.value.email;
       this.envio.ciudad = this.clienteForm.value.ciudad;
       this.envio.cp = this.clienteForm.value.cp;
@@ -101,15 +105,13 @@ export class FormularioComponent implements OnInit {
       this.envio.pais = this.clienteForm.value.pais;
     }
     if (ue.includes(this.envio.pais)) {
-      this.cartService.portes = 5;
+      this.portes = 5;
       this.cartService.totalPago = 5 + this.cartService.getTotalPrice();
     } else {
-      this.cartService.portes = 8;
+      this.portes = 8;
       this.cartService.totalPago = 8 + this.cartService.getTotalPrice();
     }
   }
-
-  
 
   pay(): void {
     this.createPaymentIntent(this.cartService.totalPagoCompra)
@@ -136,7 +138,11 @@ export class FormularioComponent implements OnInit {
           if (result.paymentIntent!.status === 'succeeded') {
             // Show a success message to your customer
             this.cartService
-              .ventaRealizada(this.envio, this.cartService.cartItemList)
+              .ventaRealizada(
+                this.envio,
+                this.cartService.cartItemList,
+                this.portes
+              )
               .subscribe((data) => {
                 console.log(data);
               });
@@ -152,5 +158,4 @@ export class FormularioComponent implements OnInit {
       { amount }
     );
   }
-
 }
