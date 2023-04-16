@@ -9,6 +9,8 @@ import { Product } from '../interfaces/product';
 })
 export class CartService {
   products: Product[] = [];
+  user:string=''
+  portes:number=0
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>('');
@@ -16,6 +18,7 @@ export class CartService {
   totalItem$ = new Subject<number>();
   totalItem = 0;
   constructor(private http: HttpClient) {
+   
     http.get('http://localhost:3000/productos').subscribe((data:any)=>{
       this.products=data.map((product: Product) => (product.cantidad = 0));
     })
@@ -82,6 +85,17 @@ export class CartService {
     this.totalItem$.next(this.totalItem);
   }
   ventaRealizada(data1: any, data2: any) {
+   const  producto=data2.map((pro:any)=>{
+       return  {productoId:pro.codigo, cantidad:pro.cantidad, totalImporte:pro.cantidad*pro.precio}
+    })
+    let order={
+      user:data1.email,
+      orderItem:producto
+
+    }
+     this.http.post('http://localhost:3000/orders', order).subscribe(data=>{
+      console.log('mi data angular', data)
+     })
     let datos = {
       data1,
       data2,

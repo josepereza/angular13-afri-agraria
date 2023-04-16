@@ -317,7 +317,7 @@
       </div>
       <div class="card" style="width: 18rem; color: black">
         <h5>Item : {{ cartService.getTotalPrice() | currency: 'EUR'}}</h5>
-        <h5>shipment : {{ portes | currency: 'EUR' }}</h5>
+        <h5>shipment : {{ cartService.portes| currency: 'EUR' }}</h5>
         <h5>Total to pay : {{ cartService.totalPagoCompra  | currency: 'EUR'}}</h5>
       </div>
 

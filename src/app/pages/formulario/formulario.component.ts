@@ -36,7 +36,7 @@ export class FormularioComponent implements OnInit {
       },
     },
   };
-  portes = 0;
+ 
   elementsOptions: StripeElementsOptions = {
     locale: 'en',
   };
@@ -101,10 +101,10 @@ export class FormularioComponent implements OnInit {
       this.envio.pais = this.clienteForm.value.pais;
     }
     if (ue.includes(this.envio.pais)) {
-      this.portes = 5;
+      this.cartService.portes = 5;
       this.cartService.totalPago = 5 + this.cartService.getTotalPrice();
     } else {
-      this.portes = 8;
+      this.cartService.portes = 8;
       this.cartService.totalPago = 8 + this.cartService.getTotalPrice();
     }
   }
